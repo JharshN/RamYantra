@@ -1,6 +1,5 @@
 import { NextApiHandler } from "next";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
-export const runtime = "edge";
 
 
 const handler: NextApiHandler = async (req, res) => {
@@ -16,3 +15,4 @@ const handler: NextApiHandler = async (req, res) => {
 };
 
 export default handler;
+export const runtime = "edge";
