@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as fs from 'fs';
-export const runtime = "edge";
 
 
 type Data = {
@@ -16,3 +15,4 @@ export default function handler(
     if (err) throw err;
     res.status(200).json(JSON.parse(data));
   },);}
+export const runtime = "edge";
