@@ -64,8 +64,7 @@ export default function Login() {
             Sign In
           </Heading>
           <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool features ✌️
-          </Text>
+Admin Dashbord          </Text>
         </Stack>
         <Box
           rounded={"lg"}
