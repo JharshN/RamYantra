@@ -45,7 +45,7 @@ export default function Login() {
         password,
       });
 
-      router.push("/addimage");
+      router.push("/deleteimg");
     } catch (error) {
       console.log(error);
     }

@@ -16,14 +16,14 @@ function Navnew() {
         Explore the site ⬇️
       </MenuButton>
       <MenuList>
-        <Link href={"/form"}>
+        <Link href={"/indices"}>
           <MenuItem>Indices & Daily Level</MenuItem>
         </Link>
-        <Link href={"/aboutus"}>
+        <Link href={"/foreign"}>
           <MenuItem>Foreign & Domestic Institutional Investors</MenuItem>
         </Link>
         <MenuDivider />
-        <Link href={"/contactus"}>
+        <Link href={"/greymarket"}>
           <MenuItem>Grey Market Premium</MenuItem>
         </Link>
         <Link href={"/product"}> 

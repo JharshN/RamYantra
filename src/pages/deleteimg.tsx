@@ -19,7 +19,7 @@ export default function ManageImages() {
   const [deleting, setDeleting] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Fetch all images from the bucket
+
   const fetchImages = async () => {
     try {
       setLoading(true);

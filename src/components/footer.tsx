@@ -109,9 +109,6 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"/privacypolicy"}>
               Privacy Policy
             </Box>
-            <Box as="a" href={"#"}>
-              Terms of Service
-            </Box>
           </Stack>
           <Stack
             align={{
@@ -167,10 +164,7 @@ export default function LargeWithLogoCentered() {
         </Flex>
         <Text pt={6} fontSize={"sm"} textAlign={"center"}>
           © 2024 RamYantra. All rights reserved{" "}
-          <a href="https://ramyantra.vercel.app/privacypolicy">
-            {" "}
-            Privacy Policy
-          </a>
+          <a href="https://ramyantara.com/privacypolicy"> Privacy Policy</a>
         </Text>
       </Box>
     </Box>

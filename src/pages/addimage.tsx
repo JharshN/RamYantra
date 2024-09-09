@@ -11,6 +11,12 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 
 export default function IndependentImageUploader() {
   const [imageUrls, setImageUrls] = useState<string[]>(["", "", ""]);
@@ -136,6 +142,10 @@ export default function IndependentImageUploader() {
       >
         Submit All Images
       </Button>
+      <Alert status="warning">
+        <AlertIcon />
+        If Image is not uploaded, then please signin again and try because the session might have expired.
+      </Alert>
     </Box>
   );
 }

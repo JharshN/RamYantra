@@ -19,17 +19,17 @@ const articles = [
   {
     id: 1,
     title: "Indices & Daily Level",
-    href: "/",
+    href: "/indices",
   },
   {
     id: 2,
     title: "Foreign & Domestic Institutional Investors",
-    href: "/",
+    href: "/foreign",
   },
   {
     id: 3,
     title: "Grey Market Premium",
-    href: "/",
+    href: "/greymarket",
   },
 ];
 

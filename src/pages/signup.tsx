@@ -47,7 +47,7 @@ export default function SignupCard() {
         password,
 
         options: {
-          emailRedirectTo: "https://ramyantra.vercel.app/addimage",
+          emailRedirectTo: "https://ramyantara.com/",
           data: {
             firstName,
             lastName,
@@ -73,7 +73,7 @@ export default function SignupCard() {
             Sign up
           </Heading>
           <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool features ✌️
+            Admin Signup Page
           </Text>
         </Stack>
         <Box
@@ -158,7 +158,7 @@ export default function SignupCard() {
         <Text>
           By continuing you agree to our{" "}
           <a
-            href="https://ramyantra.vercel.app/privacypolicy"
+            href="https://ramyantara.com/"
             // style={{color: "blue"}}
           >
             Privacy Policy

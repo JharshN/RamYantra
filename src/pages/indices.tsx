@@ -31,7 +31,6 @@ export default function IndicesPage() {
 
       const { indices: imageUrl } = data;
 
-      // Optimize the image using wsrv.nl
       const optimizedUrl = `https://wsrv.nl/?url=${encodeURIComponent(
         imageUrl
       )}&w=1000&q=85`;

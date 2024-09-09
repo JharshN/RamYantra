@@ -73,7 +73,7 @@ const Index = () => {
               <Button
                 leftIcon={<BsInstagram />}
                 as={Link}
-                href="/"
+                href="https://www.instagram.com/ramyantara_finserv?igsh=eGpvYzl6YXhoZXBn"
                 rounded="md"
                 color="white"
                 bg="purple.500"
@@ -81,17 +81,6 @@ const Index = () => {
               >
                 Instagram Community
               </Button>
-              <Button
-                leftIcon={<AiOutlineTwitter />}
-                as={Link}
-                href={"/"}
-                rounded="md"
-                color="white"
-                bg="twitter.400"
-                _hover={{ bg: "twitter.500" }}
-              >
-                Follow us on Twitter
-              </Button>{" "}
               <Button
                 leftIcon={<AiOutlineHome />}
                 as={Link}
