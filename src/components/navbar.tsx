@@ -263,18 +263,18 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Indices & Daily Level",
         subLabel: "All the indices and daily levels",
-        href: "/",
+        href: "/indices",
       },
       {
         label: "Foreign & Domestic Institutional Investors",
         subLabel: "Foreign & Domestic Institutional Investors",
-        href: "/",
+        href: "/foreign",
       },
 
       {
         label: "Grey Market Premium",
         subLabel: "Know the Grey Market Premium",
-        href: "/",
+        href: "/greymarket",
       },
     ],
   },
