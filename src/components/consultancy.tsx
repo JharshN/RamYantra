@@ -34,18 +34,15 @@ export default function RamyantraSection() {
             >
               Welcome to Ramyantra Consultancy Services
             </Heading>
+          
             <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
-              At Ramyantra Consultancy Services, we offer tailored financial
-              solutions designed to help individuals and businesses achieve
-              their financial goals. From equity and insurance to commodities
-              and mutual funds, our expertise ensures you get the best advice
-              and services.
-            </Text>
-            <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
-              With a focus on innovation, we are excited to announce our new
-              venture aimed at offering comprehensive consultancy to help you
-              navigate the complexities of finance. Let us be your trusted
-              partner in wealth management and financial growth.
+              Ramyantra Consultancy Services is dedicated to connecting
+              companies with the right talent while supporting job seekers in
+              finding meaningful career opportunities. We streamline the hiring
+              process by offering tailored recruitment solutions for businesses
+              and provide personalized guidance to candidates. With a focus on
+              efficiency and mutual success, Ramyantra bridges the gap between
+              organizations and top-tier professionals.
             </Text>
             <Stack direction={"row"} spacing={4}>
               <Link href="/">

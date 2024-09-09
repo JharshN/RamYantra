@@ -103,7 +103,7 @@ export default function Home() {
                   fontWeight={"normal"}
                   px={6}
                 >
-                  Know About ShareKhan
+                  Open Demat Account
                 </Button>
               </a>
             </Stack>
