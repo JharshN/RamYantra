@@ -284,43 +284,43 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Equity",
         subLabel: "Expert assistance in equity investments",
-        href: "#",
+        href: "/products/equity-investment",
       },
       {
         label: "Insurance",
         subLabel: "Comprehensive insurance solutions",
-        href: "#",
+        href: "/products/insurance-solutions",
       },
       {
         label: "Bonds",
         subLabel: "Secure your future with bonds",
-        href: "#",
+        href: "/products/bond-investments",
       },
       {
         label: "PMS/AIF",
         subLabel:
           "Portfolio Management Services & Alternative Investment Funds",
-        href: "#",
+        href: "/products/pms-aif-services",
       },
       {
         label: "Currency",
         subLabel: "Currency trading and investment solutions",
-        href: "#",
+        href: "/products/currency-trading",
       },
       {
         label: "Commodities",
         subLabel: "Trade in commodities with expert guidance",
-        href: "#",
+        href: "/products/commodities-trading",
       },
       {
         label: "Mutual Funds",
         subLabel: "Diversify your portfolio with mutual funds",
-        href: "#",
+        href: "/products/mutual-funds",
       },
       {
         label: "Loans & FD",
         subLabel: "Loans and fixed deposits for stable growth",
-        href: "#",
+        href: "/products/loans-fd",
       },
     ],
   },

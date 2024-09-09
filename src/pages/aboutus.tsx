@@ -12,7 +12,7 @@ const AboutUs = () => {
         </Heading>
         <Text fontSize="lg" mt={4} color="gray.600">
           Welcome to Ramyantara Financial Services, where we provide one of the
-          best financial services in Ahmedabad.
+          best financial services in Surat.
         </Text>
       </Flex>
 
@@ -32,7 +32,7 @@ const AboutUs = () => {
         </Text>
         <Text fontSize="lg" color="gray.700" mb={2}>
           - With us, your financial future is in safe hands. Our team of
-          professionals, led by Tushar Makwana and Viraj Joshi, ensures that you
+          professionals, led by Tushar Makwana, ensures that you
           receive top-quality service.
         </Text>
       </Box>

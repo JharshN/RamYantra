@@ -7,7 +7,6 @@ import {
   Stack,
   Text,
   Flex,
-  Tag,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
@@ -57,21 +56,21 @@ export default function LargeWithLogoCentered() {
           >
             <ListHeader>Products</ListHeader>
 
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"/products/equity-investment"}>
               Equity
             </Box>
             <Stack direction={"row"} align={"center"} spacing={2}>
-              <Box as="a" href={"#"}>
+              <Box as="a" href={"/products/insurance-solutions"}>
                 Insurance
               </Box>
             </Stack>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"/products/bond-investment"}>
               Bonds
             </Box>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"/products/pms-aif-services"}>
               PMS/AIF
             </Box>
-            <Box as="a" href={"#"}>
+            <Box as="a" href={"/products/currancy-trading"}>
               Currency
             </Box>
           </Stack>

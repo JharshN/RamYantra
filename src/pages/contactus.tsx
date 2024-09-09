@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   Heading,
@@ -77,14 +75,6 @@ export default function ContactUs() {
                 Tushar Makwana (MBA, Finance)
               </Text>
               <Text fontSize={"lg"}>+91 9638387371</Text>
-            </HStack>
-
-            <HStack>
-              <Icon as={PhoneIcon} color={"green.500"} />
-              <Text fontSize={"lg"} fontWeight={600}>
-                Viraj Joshi
-              </Text>
-              <Text fontSize={"lg"}>+91 7383123133</Text>
             </HStack>
 
             <HStack>

@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <meta httpEquiv="refresh" content="10;https://www.ramyantra.com/" />
+        <meta httpEquiv="refresh" content="10;https://ramyantara.com/" />
       </Head>
       <Container maxW="5xl" p={{ base: 5, md: 10 }}>
         <Box

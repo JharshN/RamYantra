@@ -78,7 +78,7 @@ export default function IndependentImageUploader() {
       if (error) {
         throw error;
       }else{
-        Router.push("/");
+        Router.push("/contactAdmin");
       }
 
       console.log("Image URLs inserted into database:", imageUrls);

@@ -34,7 +34,7 @@ export default function RamyantraSection() {
             >
               Welcome to Ramyantra Consultancy Services
             </Heading>
-          
+
             <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
               Ramyantra Consultancy Services is dedicated to connecting
               companies with the right talent while supporting job seekers in
@@ -45,7 +45,7 @@ export default function RamyantraSection() {
               organizations and top-tier professionals.
             </Text>
             <Stack direction={"row"} spacing={4}>
-              <Link href="/">
+              <Link href="https://wa.me/9638387371">
                 {" "}
                 <Button
                   rounded={"full"}
