@@ -26,7 +26,7 @@ function Navnew() {
         <Link href={"/greymarket"}>
           <MenuItem>Grey Market Premium</MenuItem>
         </Link>
-        <Link href={"/product"}> 
+        <Link href={"/products"}> 
           <MenuItem>
             <b>Our Products</b>
           </MenuItem>
