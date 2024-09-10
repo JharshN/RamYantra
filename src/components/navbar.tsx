@@ -276,6 +276,12 @@ const NAV_ITEMS: Array<NavItem> = [
         subLabel: "Know the Grey Market Premium",
         href: "/greymarket",
       },
+
+      {
+        label: "Suggestions on Stocks",
+        subLabel: "Pick the best stocks",
+        href: "/watchlist",
+      },
     ],
   },
   {
@@ -334,6 +340,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Other Services",
-    href: "/otherservices",
+    href: "/otherservice",
   },
 ];

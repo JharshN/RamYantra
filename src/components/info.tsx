@@ -1,139 +1,144 @@
-import React from "react";
+"use client";
+
 import {
-  Container,
   Box,
-  HStack,
-  VStack,
-  Stack,
-  Link,
+  Heading,
   Text,
+  Stack,
+  Input,
+  Textarea,
+  Button,
+  Container,
+  SimpleGrid,
+  HStack,
   Icon,
-  Tag,
-  Avatar,
-  useColorModeValue,
+  VStack,
+  Link,
+  Select,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { GoChevronRight } from "react-icons/go";
-import { Divider } from "@chakra-ui/react";
+import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
+import { FaWhatsapp } from "react-icons/fa";
+import supabase from "../../supabase";
+import { useForm, Controller } from "react-hook-form";
+import { useToast } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
-const articles = [
-  {
-    id: 1,
-    title: "Indices & Daily Level",
-    href: "/indices",
-  },
-  {
-    id: 2,
-    title: "Foreign & Domestic Institutional Investors",
-    href: "/foreign",
-  },
-  {
-    id: 3,
-    title: "Grey Market Premium",
-    href: "/greymarket",
-  },
-];
+export default function ContactUs() {
+  const { register, handleSubmit, control, reset } = useForm();
+  const toast = useToast();
+  const router = useRouter();
 
-const BlogCards = () => {
+  const onSubmit = async (data: any) => {
+    const { error } = await supabase.from("contactus").insert([{ ...data }]);
+
+    if (error) {
+      console.error("Error submitting Form:", error);
+      toast({
+        title: "Error",
+        description: error.message,
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Form submitted!",
+        description: "Thank you for your submission.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      reset();
+      router.push("/");
+    }
+  };
+
   return (
-    <>
-    <Box textAlign="center" p={4}>
-      <Text fontSize="2xl" fontWeight="bold">
-        Know About Market Indices, FII, DII, and Grey Market Premium
-      </Text>
-      <Divider />
-    </Box>
-      <Stack
-        direction={{
-          base: "column",
-          md: "row",
-        }}
-      >
-        <Container p={{ base: 5, md: 1 }}>
-          {" "}
-          <Box
-            position={"relative"}
-            height={"auto"}
-            rounded={"2xl"}
-            boxShadow={"2xl"}
-            width={"full"}
-            overflow={"hidden"}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="logo"
-              width={900}
-              height={900}
-            />
-          </Box>
-        </Container>
-        <Container p={{ base: 5, md: 1 }}>
-          <VStack spacing={8} w={{ base: "auto", md: "2xl" }}>
-            {articles.map((article, index) => (
-              <Stack
-                key={index}
-                direction="column"
-                spacing={4}
-                p={4}
-                bg={useColorModeValue("gray.100", "gray.800")}
-                border="1px solid"
-                borderColor="blue.100"
-                _hover={{
-                  borderColor: "blue.300",
-                  boxShadow: useColorModeValue(
-                    "0 4px 6px rgba(160, 174, 192, 0.6)",
-                    "0 4px 6px rgba(9, 17, 28, 0.9)"
-                  ),
-                }}
-                width={"full"}
-                rounded="lg"
-              >
-                {/* <HStack spacing={2} mb={1}>
-            
-            </HStack> */}
-                <Box textAlign="left">
-                  <Link
-                    href={article.href}
-                    fontSize="xl"
-                    lineHeight={1.2}
-                    fontWeight="bold"
-                    w="100%"
-                    _hover={{ color: "blue.400", textDecoration: "underline" }}
-                  >
-                    {article.title}
-                  </Link>
-                </Box>
-                <Box>
-                  <Stack
-                    justifyContent="space-between"
-                    direction={{ base: "column", sm: "row" }}
-                  >
-                    <HStack
-                      as={Link}
-                      spacing={1}
-                      p={1}
-                      alignItems="center"
-                      height="2rem"
-                      w="max-content"
-                      margin="auto 0"
-                      rounded="md"
-                      color="blue.400"
-                      _hover={{ bg: useColorModeValue("gray.200", "gray.700") }}
-                    >
-                      <Link href={article.href}>
-                        <Text fontSize="sm"> Know More</Text>
-                      </Link>
-                      <Icon as={GoChevronRight} w={4} h={4} />
-                    </HStack>
-                  </Stack>
-                </Box>
-              </Stack>
-            ))}
-          </VStack>
-        </Container>
+    <Box p={4}>
+      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+        <Heading fontSize={"3xl"}>Contact Us</Heading>
+        <Text color={"gray.600"} fontSize={"xl"}>
+          We're here to help. Reach out to us for any inquiries, support, or
+          information about our consultancy services.
+        </Text>
       </Stack>
-    </>
-  );
-};
 
-export default BlogCards;
+      <Container maxW={"6xl"} mt={10}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          {/* Contact Information */}
+          <VStack align={"start"} spacing={4}>
+            <Heading fontSize={"2xl"}>Get in Touch</Heading>
+            <HStack>
+              <Icon as={PhoneIcon} color={"green.500"} />
+              <Text fontSize={"lg"} fontWeight={600}>
+                Tushar Makwana (MBA, Finance)
+              </Text>
+              <Text fontSize={"lg"}>+91 9638387371</Text>
+            </HStack>
+
+            <HStack>
+              <Icon as={EmailIcon} color={"green.500"} />
+              <Text fontSize={"lg"}>Founder@ramyantra.com</Text>
+            </HStack>
+
+            <HStack>
+              <Icon as={FaWhatsapp} color={"green.400"} />
+              <Link
+                href="https://wa.me/919638387371"
+                color="green.500"
+                fontSize={"lg"}
+                fontWeight={600}
+                isExternal
+              >
+                Chat on WhatsApp
+              </Link>
+            </HStack>
+
+            <Text fontSize={"lg"} color={"gray.600"}>
+              Address: 316, Times Galaxy, Near Cinezza Multiplex, Nr. D Mart,
+              Ugat Canal Road, Jahangirpura 395005
+            </Text>
+          </VStack>
+
+          {/* Contact Form */}
+          <VStack spacing={4} align="start">
+            <Heading fontSize={"2xl"}>Send Us a Message</Heading>
+            <Input
+              {...register("name", { required: true })}
+              placeholder="Your Name"
+              size="lg"
+            />
+            <Input
+              {...register("mobile", { required: true })}
+              placeholder="Your Mobile Number"
+              size="lg"
+            />
+            <Textarea
+              {...register("information", { required: true })}
+              placeholder="Your Message"
+              size="lg"
+            />
+
+            {/* Dropdown for Hiring/Hiring */}
+            <Select
+              {...register("inquiry_type", { required: true })}
+              placeholder="Select Option"
+              size="lg"
+            >
+              <option value="hire">I want to hire</option>
+              <option value="be_hired">I want to be hired</option>
+            </Select>
+
+            <Button
+              colorScheme="blue"
+              size="lg"
+              onClick={handleSubmit(onSubmit)}
+            >
+              Send Message
+            </Button>
+          </VStack>
+        </SimpleGrid>
+      </Container>
+    </Box>
+  );
+}

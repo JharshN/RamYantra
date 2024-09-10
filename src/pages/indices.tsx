@@ -1,92 +1,73 @@
 import { useEffect, useState } from "react";
-import supabase from "../../supabase";
 import {
   Box,
   Heading,
-  Image,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Container,
   Spinner,
   Text,
-  Alert,
-  AlertIcon,
 } from "@chakra-ui/react";
+import supabase from "../../supabase";
 
-export default function IndicesPage() {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+export default function IndicesData() {
+  const [indicesData, setIndicesData] = useState<{ id: number; Indices: string; Closing: number; plusMinus: number; }[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch image from the 'images' table, specifically from the 'indices' column
-  const fetchImageFromIndices = async () => {
-    try {
-      setLoading(true);
-
-       const { data, error } = await supabase
-         .from("images")
-         .select("indices")
-         .order("id", { ascending: false }) // Adjust "id" to whatever column you're ordering by
-         .limit(1)
-         .single();
-
-      if (error) {
-        throw error;
-      }
-
-      const { indices: imageUrl } = data;
-
-      const optimizedUrl = `https://wsrv.nl/?url=${encodeURIComponent(
-        imageUrl
-      )}&w=1000&q=85`;
-
-      setImageUrl(optimizedUrl);
-    } catch (error) {
-      console.error("Error fetching image:", error);
-      setErrorMessage("Failed to load image.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  // Fetch data from Supabase
   useEffect(() => {
-    fetchImageFromIndices();
+    const fetchIndices = async () => {
+      const { data, error } = await supabase.from("marketUpdate").select("*"); // Replace 'Indices' with your actual table name
+      if (error) {
+        console.error("Error fetching Indices data:", error);
+      } else {
+        setIndicesData(data);
+      }
+      setLoading(false);
+    };
+
+    fetchIndices();
   }, []);
 
+  if (loading) {
+    return (
+      <Box textAlign="center" mt={10}>
+        <Spinner size="xl" />
+        <Text mt={4}>Loading data...</Text>
+      </Box>
+    );
+  }
+
   return (
-    <Box
-      p={5}
-      boxShadow="lg"
-      borderWidth="1px"
-      borderRadius="md"
-      maxW="1200px"
-      mx="auto"
-      textAlign="center"
-    >
-      <Heading size="lg" mb={6}>
-        Indices
+    <Container maxW="container.lg" py={6}>
+      <Heading as="h1" size="xl" textAlign="center" mb={6}>
+        Indices Data
       </Heading>
 
-      {loading ? (
-        <Box textAlign="center">
-          <Spinner size="lg" />
-          <Text mt={2}>Loading image...</Text>
-        </Box>
-      ) : errorMessage ? (
-        <Alert status="error" mb={4}>
-          <AlertIcon />
-          {errorMessage}
-        </Alert>
-      ) : (
-        imageUrl && (
-          <Image
-            src={imageUrl}
-            alt="Indices Image"
-            width="100%"
-            height="auto"
-            borderRadius="md"
-            boxShadow="lg"
-            objectFit="cover"
-          />
-        )
-      )}
-    </Box>
+      <Table variant="simple">
+        <Thead>
+          <Tr>
+            <Th>ID</Th>
+            <Th>Indices</Th>
+            <Th>Closing</Th>
+            <Th>Plus/Minus</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {indicesData.map((indices) => (
+            <Tr key={indices.id}>
+              <Td>{indices.id}</Td>
+              <Td>{indices.Indices}</Td>
+              <Td>{indices.Closing}</Td>
+              <Td>{indices.plusMinus}</Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </Container>
   );
 }

@@ -45,7 +45,7 @@ export default function Login() {
         password,
       });
 
-      router.push("/deleteimg");
+      router.push("/contactAdmin");
     } catch (error) {
       console.log(error);
     }
@@ -64,7 +64,8 @@ export default function Login() {
             Sign In
           </Heading>
           <Text fontSize={"lg"} color={"gray.600"}>
-Admin Dashbord          </Text>
+            Admin Dashbord{" "}
+          </Text>
         </Stack>
         <Box
           rounded={"lg"}

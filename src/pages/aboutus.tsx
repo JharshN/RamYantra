@@ -19,8 +19,8 @@ const AboutUs = () => {
       {/* Company Details Section */}
       <Box bg="white" boxShadow="lg" p={8} rounded="lg">
         <Text fontSize="xl" color="purple.700" mb={4}>
-          We specialize in a variety of financial services tailored to meet your
-          needs:
+          <b>Ramyantara</b> is a Sanskrit word Which means{" "}
+          <b>pleasantly diversified</b>
         </Text>
         <Text fontSize="lg" color="gray.700" mb={2}>
           - Equity, Insurance, Bonds, PMS/AIF, Currency, Commodities, Mutual
@@ -32,8 +32,8 @@ const AboutUs = () => {
         </Text>
         <Text fontSize="lg" color="gray.700" mb={2}>
           - With us, your financial future is in safe hands. Our team of
-          professionals, led by Tushar Makwana, ensures that you
-          receive top-quality service.
+          professionals, led by Tushar Makwana, ensures that you receive
+          top-quality service.
         </Text>
       </Box>
 

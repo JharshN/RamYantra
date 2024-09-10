@@ -50,8 +50,11 @@ export default function RamyantraSection() {
               talent mapping, salary/compensation benchmarking, consultation,
               temporary staffing, leadership hiring, payroll outsourcing, and
               permanent recruitment-search and selection. <br />
-              <Link href="https://wa.me/9638387371">
+              <Link href="https://wa.me/7874266271">
                 <Button colorScheme="whatsapp"> Connect Us On whatsapp</Button>
+              </Link>&nbsp;&nbsp; &nbsp;&nbsp;
+              <Link href="/otherservice">
+                <Button colorScheme="blue"> Know More</Button>
               </Link>
             </Text>
           </Stack>

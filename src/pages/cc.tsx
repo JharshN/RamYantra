@@ -30,7 +30,7 @@ export default function AdminPanel() {
     const fetchContactUsData = async () => {
       try {
         const { data, error } = await supabase
-          .from("contactus") // Replace with your actual table name
+          .from("ramyantraconsultancy") // Replace with your actual table name
           .select("*");
 
         if (error) {
@@ -76,6 +76,7 @@ export default function AdminPanel() {
                 <Th>Name</Th>
                 <Th>Mobile</Th>
                 <Th>Information</Th>
+                <Th>Inquiry Type</Th>
                 <Th>Contact on WhatsApp</Th>
               </Tr>
             </Thead>
@@ -84,7 +85,10 @@ export default function AdminPanel() {
                 <Tr key={contact.id}>
                   <Td>{contact.name}</Td>
                   <Td>{contact.mobile}</Td>
-                  <Td>{contact.information}</Td>
+                  <Td>{contact.message}</Td>
+                  <Td>
+                    {contact.type === "be_hired" ? "I want to be hired" : "I want to hire"}
+                  </Td>
                   <Td>
                     <HStack spacing={4}>
                       <Text>{contact.mobile}</Text>
@@ -106,8 +110,8 @@ export default function AdminPanel() {
         </Container>
       </Box>
       <br />
-      <Link href="/cc">
-        <Button>Consulatancy</Button>
+      <Link href="/">
+        <Button>Home Page</Button>
       </Link>
       <br />
       <Link href="/signout">

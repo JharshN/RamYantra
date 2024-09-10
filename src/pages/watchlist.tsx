@@ -14,23 +14,23 @@ import {
 } from "@chakra-ui/react";
 import supabase from "../../supabase";
 
-export default function IPOData() {
-  const [ipoData, setIpoData] = useState<{ id: number; Name: string; date: string; Price: number; Lot: number; GMP: number; }[]>([]);
+export default function StockData() {
+  const [stocks, setStocks] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch data from Supabase
   useEffect(() => {
-    const fetchIPO = async () => {
-      const { data, error } = await supabase.from("IPOs").select("*"); // Replace 'IPO' with your actual table name
+    const fetchStocks = async () => {
+      const { data, error } = await supabase.from("WATCHLIST").select("*"); // Replace 'stocks' with your actual table name
       if (error) {
-        console.error("Error fetching IPO data:", error);
+        console.error("Error fetching stock data:", error);
       } else {
-        setIpoData(data);
+        setStocks(data);
       }
       setLoading(false);
     };
 
-    fetchIPO();
+    fetchStocks();
   }, []);
 
   if (loading) {
@@ -45,29 +45,27 @@ export default function IPOData() {
   return (
     <Container maxW="container.lg" py={6}>
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
-        IPO Data
+        Preffered Stocks
       </Heading>
 
-      <Table variant="simple">
-        <Thead>
+      <Table variant="striped">
+        <Thead >
           <Tr>
             <Th>ID</Th>
             <Th>Name</Th>
-            <Th>Date</Th>
-            <Th>Price</Th>
-            <Th>Lot</Th>
-            <Th>GMP</Th>
+            <Th>Levels</Th>
+            <Th>Support</Th>
+            <Th>Duration</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {ipoData.map((ipo) => (
-            <Tr key={ipo.id}>
-              <Td>{ipo.id}</Td>
-              <Td>{ipo.Name}</Td>
-              <Td>{ipo.date}</Td>
-              <Td>{ipo.Price}</Td>
-              <Td>{ipo.Lot}</Td>
-              <Td>{ipo.GMP}</Td>
+          {stocks.map((stock) => (
+            <Tr key={stock.id}>
+              <Td>{stock.id}</Td>
+              <Td>{stock.NAME}</Td>
+              <Td>{stock.LEVELS}</Td>
+              <Td>{stock.SUPPORT}</Td>
+              <Td>{stock.DURATION}</Td>
             </Tr>
           ))}
         </Tbody>

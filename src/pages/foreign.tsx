@@ -1,93 +1,70 @@
 import { useEffect, useState } from "react";
-import supabase from "../../supabase";
 import {
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
   Box,
   Heading,
-  Image,
-  Spinner,
-  Text,
-  Alert,
-  AlertIcon,
+  Flex,
 } from "@chakra-ui/react";
+import supabase from "../../supabase";
 
-export default function IndicesPage() {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  // Fetch image from the 'images' table, specifically from the 'indices' column
-  const fetchImageFromIndices = async () => {
-    try {
-      setLoading(true);
-
-       const { data, error } = await supabase
-         .from("images")
-         .select("foreign")
-         .order("id", { ascending: false }) // Adjust "id" to whatever column you're ordering by
-         .limit(1)
-         .single();
-
-      if (error) {
-        throw error;
-      }
-
-      const { foreign: imageUrl } = data;
-
-      // Optimize the image using wsrv.nl
-      const optimizedUrl = `https://wsrv.nl/?url=${encodeURIComponent(
-        imageUrl
-      )}&w=1000&q=85`;
-
-      setImageUrl(optimizedUrl);
-    } catch (error) {
-      console.error("Error fetching image:", error);
-      setErrorMessage("Failed to load image.");
-    } finally {
-      setLoading(false);
-    }
-  };
+export default function SimpleTable() {
+  const [data, setData] = useState<{ id: number; FiiBuy?: number; FiiSell?: number; DiiBuy?: number; DiiSell?: number; NetBuy?: number; NetSell?: number; }[]>([]);
 
   useEffect(() => {
-    fetchImageFromIndices();
+    async function fetchData() {
+      const { data: tableData, error } = await supabase
+        .from("FiiDiiData") // Replace with your actual table name
+        .select("*");
+
+      if (error) {
+        console.error("Error fetching data:", error);
+      } else {
+        setData(tableData);
+      }
+    }
+
+    fetchData();
   }, []);
 
   return (
-    <Box
-      p={5}
-      boxShadow="lg"
-      borderWidth="1px"
-      borderRadius="md"
-      maxW="1200px"
-      mx="auto"
-      textAlign="center"
-    >
-      <Heading size="lg" mb={6}>
-        Foreign Investments
-      </Heading>
+    <Box width="100%" maxW="800px" mx="auto" py={10}>
+      <Flex justifyContent="center" mb={5}>
+        <Heading as="h3" size="lg">
+          FIIs & DIIs Table
+        </Heading>
+      </Flex>
 
-      {loading ? (
-        <Box textAlign="center">
-          <Spinner size="lg" />
-          <Text mt={2}>Loading image...</Text>
-        </Box>
-      ) : errorMessage ? (
-        <Alert status="error" mb={4}>
-          <AlertIcon />
-          {errorMessage}
-        </Alert>
-      ) : (
-        imageUrl && (
-          <Image
-            src={imageUrl}
-            alt="Foreign Investments Image"
-            width="100%"
-            height="auto"
-            borderRadius="md"
-            boxShadow="lg"
-            objectFit="cover"
-          />
-        )
-      )}
+      <Table variant="striped" colorScheme="orange">
+        <Thead>
+          <Tr>
+            <Th>ID</Th>
+            <Th>FiiBuy (₹ Cr)</Th>
+            <Th>FiiSell (₹ Cr)</Th>
+            <Th>DiiBuy (₹ Cr)</Th>
+            <Th>DiiSell (₹ Cr)</Th>
+            <Th>NetBuy (₹ Cr)</Th>
+            <Th>NetSell (₹ Cr)</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {data.map((row) => (
+            <Tr key={row.id}>
+              <Td>{row.id}</Td>
+              <Td>{row.FiiBuy ? row.FiiBuy : "-"}</Td>
+              <Td>{row.FiiSell ? row.FiiSell : "-"}</Td>
+              <Td>{row.DiiBuy ? row.DiiBuy : "-"}</Td>
+              <Td>{row.DiiSell ? row.DiiSell : "-"}</Td>
+              <Td>{row.NetBuy ? row.NetBuy : "-"}</Td>
+              <Td>{row.NetSell ? row.NetSell : "-"}</Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
     </Box>
   );
 }
