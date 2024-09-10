@@ -19,6 +19,7 @@ import supabase from "../../supabase";
 import { useForm, Controller } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { Divider } from "@chakra-ui/react";
 
 export default function ContactUs() {
   const form = useForm();
@@ -79,7 +80,7 @@ export default function ContactUs() {
 
             <HStack>
               <Icon as={EmailIcon} color={"green.500"} />
-              <Text fontSize={"lg"}>ramyantara.finserv@gmail.com</Text>
+              <Text fontSize={"lg"}>Founder@ramyantara.com</Text>
             </HStack>
 
             <HStack>

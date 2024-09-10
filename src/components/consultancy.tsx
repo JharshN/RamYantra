@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 
 export default function RamyantraSection() {
-      const bgColor = useColorModeValue("blue.50", "blue.800");
+  const bgColor = useColorModeValue("blue.50", "blue.800");
 
   return (
     <Box bg={bgColor} py={10}>
@@ -36,33 +36,24 @@ export default function RamyantraSection() {
             </Heading>
 
             <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
-              Ramyantra Consultancy Services is dedicated to connecting
-              companies with the right talent while supporting job seekers in
-              finding meaningful career opportunities. We streamline the hiring
-              process by offering tailored recruitment solutions for businesses
-              and provide personalized guidance to candidates. With a focus on
-              efficiency and mutual success, Ramyantra bridges the gap between
-              organizations and top-tier professionals.
-            </Text>
-            <Stack direction={"row"} spacing={4}>
+              <b>JOB SEEKERS</b>
+              <br /> We're glad you're here. We are all about you, first and
+              foremost! We are about making your job search experience easier,
+              faster and more effective. Our easy-to follow search steps and
+              tips will help you make you job search the best it can be. Start
+              searching now and enjoy!
+              <br />
+              <b> FIND NEW ROLES EMPLOYERS</b>
+              <br /> We are a leader in the region with strong talents and a
+              focus on the needs of others. Our solution portfolio includes
+              comprehensive and integrated end-to-end HR solutions, including
+              talent mapping, salary/compensation benchmarking, consultation,
+              temporary staffing, leadership hiring, payroll outsourcing, and
+              permanent recruitment-search and selection. <br />
               <Link href="https://wa.me/9638387371">
-                {" "}
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  colorScheme={"blue"}
-                  bg={"blue.600"}
-                  _hover={{ bg: "blue.700" }}
-                >
-                  Learn More
-                </Button>
+                <Button colorScheme="whatsapp"> Connect Us On whatsapp</Button>
               </Link>
-              <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
-                Contact Us
-              </Button>
-            </Stack>
+            </Text>
           </Stack>
 
           {/* Right Side - Image Section */}

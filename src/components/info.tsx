@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { GoChevronRight } from "react-icons/go";
+import { Divider } from "@chakra-ui/react";
 
 const articles = [
   {
@@ -38,8 +39,9 @@ const BlogCards = () => {
     <>
     <Box textAlign="center" p={4}>
       <Text fontSize="2xl" fontWeight="bold">
-        Common Topics
+        Know About Market Indices, FII, DII, and Grey Market Premium
       </Text>
+      <Divider />
     </Box>
       <Stack
         direction={{
