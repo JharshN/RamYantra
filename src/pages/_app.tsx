@@ -1,8 +1,4 @@
-import {
-  ChakraProvider,
-  extendTheme,
-  ThemeConfig,
-} from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import Navbar from "../components/navbar";
 import { type AppProps } from "next/app";
@@ -12,7 +8,6 @@ import { useState } from "react";
 import AuthContextProvider from "@/context";
 import Head from "next/head";
 require("dotenv").config();
-
 
 const inter = Inter({ subsets: ["latin"] });
 const supabaseUrl = "https://yjiwgellliymqmxejgee.supabase.co";
@@ -56,7 +51,6 @@ export default function App({
           <AuthContextProvider>
             <div className={inter.className}>
               <Navbar />
-
               <Component {...pageProps} />
             </div>
           </AuthContextProvider>

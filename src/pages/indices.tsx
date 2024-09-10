@@ -15,7 +15,9 @@ import {
 import supabase from "../../supabase";
 
 export default function IndicesData() {
-  const [indicesData, setIndicesData] = useState<{ id: number; Indices: string; Closing: number; plusMinus: number; }[]>([]);
+  const [indicesData, setIndicesData] = useState<
+    { id: number; Indices: string; Closing: number; plusMinus: number }[]
+  >([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch data from Supabase
@@ -43,31 +45,33 @@ export default function IndicesData() {
   }
 
   return (
-    <Container maxW="container.lg" py={6}>
-      <Heading as="h1" size="xl" textAlign="center" mb={6}>
-        Indices Data
-      </Heading>
+    <>
+      <Container maxW="container.lg" py={6} overflowY="auto">
+        <Heading as="h1" size="xl" textAlign="center" mb={6}>
+          Indices Data
+        </Heading>
 
-      <Table variant="simple">
-        <Thead>
-          <Tr>
-            <Th>ID</Th>
-            <Th>Indices</Th>
-            <Th>Closing</Th>
-            <Th>Plus/Minus</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          {indicesData.map((indices) => (
-            <Tr key={indices.id}>
-              <Td>{indices.id}</Td>
-              <Td>{indices.Indices}</Td>
-              <Td>{indices.Closing}</Td>
-              <Td>{indices.plusMinus}</Td>
+        <Table variant="simple">
+          <Thead>
+            <Tr>
+              <Th>ID</Th>
+              <Th>Indices</Th>
+              <Th>Closing</Th>
+              <Th>Plus/Minus</Th>
             </Tr>
-          ))}
-        </Tbody>
-      </Table>
-    </Container>
+          </Thead>
+          <Tbody>
+            {indicesData.map((indices) => (
+              <Tr key={indices.id}>
+                <Td>{indices.id}</Td>
+                <Td>{indices.Indices}</Td>
+                <Td>{indices.Closing}</Td>
+                <Td>{indices.plusMinus}</Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Container>
+    </>
   );
 }

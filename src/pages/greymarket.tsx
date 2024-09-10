@@ -43,7 +43,7 @@ export default function IPOData() {
   }
 
   return (
-    <Container maxW="container.lg" py={6}>
+    <Container maxW="container.lg" py={6} overflowY="auto">
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
         IPO Data
       </Heading>

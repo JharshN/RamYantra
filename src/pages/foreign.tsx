@@ -13,7 +13,17 @@ import {
 import supabase from "../../supabase";
 
 export default function SimpleTable() {
-  const [data, setData] = useState<{ id: number; FiiBuy?: number; FiiSell?: number; DiiBuy?: number; DiiSell?: number; NetBuy?: number; NetSell?: number; }[]>([]);
+  const [data, setData] = useState<
+    {
+      id: number;
+      FiiBuy?: number;
+      FiiSell?: number;
+      DiiBuy?: number;
+      DiiSell?: number;
+      NetBuy?: number;
+      NetSell?: number;
+    }[]
+  >([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -32,7 +42,7 @@ export default function SimpleTable() {
   }, []);
 
   return (
-    <Box width="100%" maxW="800px" mx="auto" py={10}>
+    <Box width="100%" maxW="800px" mx="auto" py={10} overflowY="auto">
       <Flex justifyContent="center" mb={5}>
         <Heading as="h3" size="lg">
           FIIs & DIIs Table

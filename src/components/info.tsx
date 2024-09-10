@@ -29,13 +29,13 @@ const articles = [
   },
   {
     id: 3,
-    title: "IPO Grey Market Premium",
+    title: "IPO",
     href: "/greymarket",
   },
   {
     id: 4,
     title: "Watch List",
-    href: "/Watchlist",
+    href: "/watchlist",
   },
 ];
 

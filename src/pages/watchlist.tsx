@@ -43,13 +43,13 @@ export default function StockData() {
   }
 
   return (
-    <Container maxW="container.lg" py={6}>
+    <Container maxW="container.lg" py={6} overflowY="auto">
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
         Preffered Stocks
       </Heading>
 
       <Table variant="striped">
-        <Thead >
+        <Thead>
           <Tr>
             <Th>ID</Th>
             <Th>Name</Th>
