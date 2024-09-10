@@ -20,10 +20,12 @@ export default function IndicesPage() {
     try {
       setLoading(true);
 
-      const { data, error } = await supabase
-        .from("images")
-        .select("indices")
-        .single();
+       const { data, error } = await supabase
+         .from("images")
+         .select("indices")
+         .order("id", { ascending: false }) // Adjust "id" to whatever column you're ordering by
+         .limit(1)
+         .single();
 
       if (error) {
         throw error;

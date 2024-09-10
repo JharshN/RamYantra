@@ -30,8 +30,8 @@ export default function Home() {
         description="RamYantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         openGraph={{
           url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
-          title: "yantramaya",
-          description: "Home page of yantramaya",
+          title: "Ramyantra",
+          description: "Home page of RamYantra",
           images: [
             {
               url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",

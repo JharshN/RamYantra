@@ -23,6 +23,8 @@ export default function greymarketPage() {
       const { data, error } = await supabase
         .from("images")
         .select("greymarket")
+        .order("id", { ascending: false }) // Adjust "id" to whatever column you're ordering by
+        .limit(1)
         .single();
 
       if (error) {
