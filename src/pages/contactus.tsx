@@ -112,7 +112,7 @@ export default function ContactUs() {
             />
             <Input
               {...register("mobile", { required: true })}
-              placeholder="Your Mobile Number"
+              placeholder="Your Mobile Number / Email"
               size="lg"
             />
             <Textarea

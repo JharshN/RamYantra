@@ -45,10 +45,17 @@ export default function Login() {
         password,
       });
 
-      router.push("/contactAdmin");
     } catch (error) {
+      toast({
+        title: "Error.",
+        description: "Invalid email or password",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
       console.log(error);
     }
+
   };
 
   return (

@@ -272,8 +272,8 @@ const NAV_ITEMS: Array<NavItem> = [
       },
 
       {
-        label: "Grey Market Premium",
-        subLabel: "Know the Grey Market Premium",
+        label: "IPOs",
+        subLabel: "Know More About IPOs",
         href: "/greymarket",
       },
 
