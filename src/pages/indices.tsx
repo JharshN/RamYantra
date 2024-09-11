@@ -54,7 +54,7 @@ export default function IndicesData() {
         <Table variant="simple">
           <Thead>
             <Tr>
-              <Th>ID</Th>
+              {/* <Th>ID</Th> */}
               <Th>Indices</Th>
               <Th>Closing</Th>
               <Th>Plus/Minus</Th>
@@ -63,7 +63,7 @@ export default function IndicesData() {
           <Tbody>
             {indicesData.map((indices) => (
               <Tr key={indices.id}>
-                <Td>{indices.id}</Td>
+                {/* <Td>{indices.id}</Td> */}
                 <Td>{indices.Indices}</Td>
                 <Td>{indices.Closing}</Td>
                 <Td>{indices.plusMinus}</Td>

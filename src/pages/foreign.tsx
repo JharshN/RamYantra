@@ -52,7 +52,6 @@ export default function SimpleTable() {
       <Table variant="striped" colorScheme="orange">
         <Thead>
           <Tr>
-            <Th>ID</Th>
             <Th>FiiBuy (₹ Cr)</Th>
             <Th>FiiSell (₹ Cr)</Th>
             <Th>DiiBuy (₹ Cr)</Th>
@@ -64,7 +63,6 @@ export default function SimpleTable() {
         <Tbody>
           {data.map((row) => (
             <Tr key={row.id}>
-              <Td>{row.id}</Td>
               <Td>{row.FiiBuy ? row.FiiBuy : "-"}</Td>
               <Td>{row.FiiSell ? row.FiiSell : "-"}</Td>
               <Td>{row.DiiBuy ? row.DiiBuy : "-"}</Td>

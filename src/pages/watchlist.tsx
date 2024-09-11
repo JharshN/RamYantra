@@ -51,7 +51,7 @@ export default function StockData() {
       <Table variant="striped">
         <Thead>
           <Tr>
-            <Th>ID</Th>
+            {/* <Th>ID</Th> */}
             <Th>Name</Th>
             <Th>Levels</Th>
             <Th>Support</Th>
@@ -61,7 +61,7 @@ export default function StockData() {
         <Tbody>
           {stocks.map((stock) => (
             <Tr key={stock.id}>
-              <Td>{stock.id}</Td>
+              {/* <Td>{stock.id}</Td> */}
               <Td>{stock.NAME}</Td>
               <Td>{stock.LEVELS}</Td>
               <Td>{stock.SUPPORT}</Td>

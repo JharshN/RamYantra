@@ -51,7 +51,7 @@ export default function IPOData() {
       <Table variant="simple">
         <Thead>
           <Tr>
-            <Th>ID</Th>
+            {/* <Th>ID</Th> */}
             <Th>Name</Th>
             <Th>Date</Th>
             <Th>Price</Th>
@@ -62,7 +62,7 @@ export default function IPOData() {
         <Tbody>
           {ipoData.map((ipo) => (
             <Tr key={ipo.id}>
-              <Td>{ipo.id}</Td>
+              {/* <Td>{ipo.id}</Td> */}
               <Td>{ipo.Name}</Td>
               <Td>{ipo.date}</Td>
               <Td>{ipo.Price}</Td>
