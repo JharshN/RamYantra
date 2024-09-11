@@ -44,7 +44,7 @@ export default function App({
           <title>ramyantara</title>
           <meta
             name="Ramyantra"
-            content="Ramyantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+            content="Ramyantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
           />
         </Head>
         <ChakraProvider theme={theme}>

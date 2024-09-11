@@ -26,7 +26,7 @@ const features = [
   },
   {
     id: 3,
-    title: "Bonds",
+    title: "Bonds & NCDs",
     text: "Secure your future with bonds, offering stable returns and lower risk.",
   },
   {

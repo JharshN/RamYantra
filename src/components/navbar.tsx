@@ -298,7 +298,7 @@ const NAV_ITEMS: Array<NavItem> = [
         href: "/products/insurance-solutions",
       },
       {
-        label: "Bonds",
+        label: "Bonds & NCDs",
         subLabel: "Secure your future with bonds",
         href: "/products/bond-investments",
       },

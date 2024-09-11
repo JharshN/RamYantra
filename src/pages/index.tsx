@@ -27,7 +27,7 @@ export default function Home() {
     <>
       <NextSeo
         title="RamYantra"
-        description="RamYantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+        description="RamYantra Financial Services provides top-notch financial solutions, specializing in equity, insurance,  bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         openGraph={{
           url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
           title: "Ramyantra",

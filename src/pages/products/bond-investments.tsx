@@ -7,19 +7,20 @@ import {
   Image,
   Stack,
   Divider,
+  Button,
 } from "@chakra-ui/react";
 
-export default function BondInvestmentBlog() {
+export default function BondAndNCDInvestmentBlog() {
   return (
     <Container maxW={"6xl"} py={12}>
       {/* Blog Header */}
       <VStack spacing={4} textAlign="center">
         <Heading as="h1" fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}>
-          Bond Investments: A Guide to Steady Income and Security
+          Bonds & NCD Investments: A Guide to Steady Income and Security
         </Heading>
         <Text color={"gray.500"} fontSize={{ base: "lg", md: "xl" }}>
-          Discover how investing in bonds can provide stable returns, safety,
-          and diversification in your investment portfolio.
+          Discover how investing in bonds and NCDs can provide stable returns,
+          safety, and diversification in your investment portfolio.
         </Text>
       </VStack>
 
@@ -33,107 +34,88 @@ export default function BondInvestmentBlog() {
         />
       </Box>
 
-      {/* Bond Investment Introduction */}
+      {/* Bond & NCD Investment Introduction */}
       <Stack spacing={6} mt={10}>
         <Heading as="h2" fontSize={"3xl"}>
-          What Are Bond Investments?
+          What Are Bond & NCD Investments?
         </Heading>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          Bond investments involve lending money to a government, corporation,
-          or other entity in exchange for periodic interest payments and the
-          return of the principal amount at maturity. Bonds are considered a
-          more conservative investment compared to stocks and are used to
-          diversify investment portfolios while providing stable income.
+          Bond and NCD investments involve lending money to a government,
+          corporation, or other entity in exchange for periodic interest
+          payments and the return of the principal amount at maturity. Bonds are
+          considered a conservative investment, while NCDs offer higher interest
+          rates but may carry more risk.
         </Text>
       </Stack>
 
       <Divider mt={8} />
 
-      {/* Why Invest in Bonds */}
+      {/* Why Invest in Bonds & NCDs */}
       <Stack spacing={6} mt={10}>
         <Heading as="h2" fontSize={"3xl"}>
-          Why Invest in Bonds?
+          Why Invest in Bonds & NCDs?
         </Heading>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          Investing in bonds offers several advantages, particularly for those
-          seeking stable income and lower risk. Here are some reasons to
-          consider bond investments:
+          Investing in bonds and NCDs offers several advantages, particularly
+          for those seeking stable income and diversified risk. Here are some
+          reasons to consider these investments:
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>1. Steady Income:</strong> Bonds provide regular interest
-          payments, known as coupon payments, which can offer a reliable source
-          of income.
+          <strong>1. Steady Income:</strong> Bonds and NCDs provide regular
+          interest payments, known as coupon payments, which can offer a
+          reliable source of income.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>2. Capital Preservation:</strong> Bonds are generally less
-          volatile than stocks, which helps in preserving the principal
-          investment.
+          <strong>2. Higher Returns with NCDs:</strong> NCDs generally offer
+          higher interest rates than bonds, but come with slightly higher risk.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>3. Diversification:</strong> Including bonds in your
-          investment portfolio can help diversify your holdings and reduce
-          overall risk.
+          <strong>3. Capital Preservation with Bonds:</strong> Bonds are
+          generally less volatile than stocks, helping in preserving your
+          principal investment.
+        </Text>
+        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+          <strong>4. Diversification:</strong> Including bonds and NCDs in your
+          investment portfolio can help reduce overall risk.
         </Text>
       </Stack>
 
       <Divider mt={8} />
 
-      {/* Types of Bond Investments */}
+      {/* Differences Between Bonds and NCDs */}
       <Stack spacing={6} mt={10}>
         <Heading as="h2" fontSize={"3xl"}>
-          Types of Bond Investments
+          Differences Between Bonds and Non-Convertible Debentures (NCDs)
         </Heading>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          Bond investments come in various forms, each offering different
-          benefits and risks:
+          Bonds and non-convertible debentures (NCDs) are both fixed-income
+          securities, but they differ in several key ways:
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>1. Government Bonds:</strong> Issued by national governments,
-          these bonds are considered low-risk and provide a secure investment
-          option. Examples include U.S. Treasury bonds.
+          <strong>1. Conversion:</strong> Bonds can be either convertible or
+          non-convertible, meaning they can potentially be converted into
+          company shares. NCDs, on the other hand, are non-convertible and
+          cannot be converted into equities or shares.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>2. Corporate Bonds:</strong> Issued by companies, these bonds
-          offer higher yields compared to government bonds but come with higher
-          risk based on the issuing company's creditworthiness.
+          <strong>2. Security:</strong> Bonds may or may not be secured, whereas
+          NCDs are typically backed by the company's assets, making them
+          somewhat safer.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>3. Municipal Bonds:</strong> Issued by state or local
-          governments, these bonds often come with tax benefits and can be a
-          good option for those in higher tax brackets.
+          <strong>3. Purpose:</strong> Bonds are often issued by governments or
+          corporations to fund various projects. NCDs are primarily issued to
+          raise long-term capital.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>4. Zero-Coupon Bonds:</strong> These bonds are sold at a
-          discount and do not provide periodic interest payments. Instead, they
-          mature at face value, providing a lump sum payment at maturity.
-        </Text>
-      </Stack>
-
-      <Divider mt={8} />
-
-      {/* Risks of Bond Investments */}
-      <Stack spacing={6} mt={10}>
-        <Heading as="h2" fontSize={"3xl"}>
-          Risks of Bond Investments
-        </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          While bonds are generally considered safer than stocks, they come with
-          their own set of risks:
+          <strong>4. Interest Rates:</strong> Bonds offer variable interest
+          rates, while NCDs generally provide higher fixed interest rates to
+          attract investors.
         </Text>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>1. Interest Rate Risk:</strong> When interest rates rise, the
-          value of existing bonds typically falls, potentially leading to losses
-          if sold before maturity.
-        </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>2. Credit Risk:</strong> The risk that the bond issuer may
-          default on interest payments or the return of principal, affecting the
-          bond’s value.
-        </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          <strong>3. Inflation Risk:</strong> Inflation can erode the purchasing
-          power of the interest payments and principal return, impacting the
-          real value of the bond’s returns.
+          <strong>5. Risk Level:</strong> Bonds can be riskier depending on the
+          issuer, while NCDs are often considered safer due to the security
+          backing them, although they cannot be converted into shares.
         </Text>
       </Stack>
 
@@ -145,13 +127,29 @@ export default function BondInvestmentBlog() {
           Conclusion
         </Heading>
         <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
-          Bond investments offer a reliable and lower-risk option for generating
-          income and preserving capital. By understanding the different types of
-          bonds and their associated risks, you can make informed decisions to
-          enhance your investment portfolio. Bonds can play a crucial role in
-          achieving a balanced and diversified investment strategy.
+          Bonds and non-convertible debentures are both viable investment
+          options for those looking for stable returns. While bonds may offer
+          the flexibility of conversion into shares, NCDs provide higher
+          interest rates and a safer investment profile. Investors should assess
+          their financial goals and risk tolerance before choosing between these
+          two.
         </Text>
       </Stack>
+
+      {/* Call to Action - Learn More about NCDs */}
+      {/* <Box mt={10} textAlign="center">
+        <Text fontSize="lg" color={"gray.600"} mb={4}>
+          Interested in learning more about Non-Convertible Debentures (NCDs)?
+        </Text>
+        <Button
+          as="a"
+          href="/ncd-details" // Replace with actual link
+          size="lg"
+          colorScheme="teal"
+        >
+          Learn More About NCDs
+        </Button>
+      </Box> */}
     </Container>
   );
 }
