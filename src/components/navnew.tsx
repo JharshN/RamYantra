@@ -24,7 +24,7 @@ function Navnew() {
         </Link>
         <MenuDivider />
         <Link href={"/greymarket"}>
-          <MenuItem>Grey Market Premium</MenuItem>
+          <MenuItem>IPOs</MenuItem>
         </Link>
         <Link href={"/products"}> 
           <MenuItem>
