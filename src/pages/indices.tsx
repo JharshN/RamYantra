@@ -51,7 +51,7 @@ export default function IndicesData() {
           Indices Data
         </Heading>
 
-        <Table variant="simple">
+        <Table variant="striped">
           <Thead>
             <Tr>
               {/* <Th>ID</Th> */}

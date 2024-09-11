@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import {
   Table,
   Thead,
@@ -7,72 +8,72 @@ import {
   Th,
   Td,
   Box,
-  Heading,
-  Flex,
+  Spinner,
 } from "@chakra-ui/react";
 import supabase from "../../supabase";
 
-export default function SimpleTable() {
+
+const FiiDiiDataPage = () => {
   const [data, setData] = useState<
     {
-      id: number;
-      FiiBuy?: number;
-      FiiSell?: number;
-      DiiBuy?: number;
-      DiiSell?: number;
-      NetBuy?: number;
-      NetSell?: number;
+      PROVISONAL: ReactNode;
+      sell: string;
+      buy: string;
     }[]
   >([]);
+  const [loading, setLoading] = useState(true);
 
+  // Fetch data from Supabase
   useEffect(() => {
-    async function fetchData() {
-      const { data: tableData, error } = await supabase
-        .from("FiiDiiData") // Replace with your actual table name
+    const fetchData = async () => {
+      const { data, error } = await supabase
+        .from("FiiDiiData") // Replace this with your table name
         .select("*");
-
       if (error) {
         console.error("Error fetching data:", error);
       } else {
-        setData(tableData);
+        setData(data as never[]);
       }
-    }
-
+      setLoading(false);
+    };
     fetchData();
   }, []);
 
-  return (
-    <Box width="100%" maxW="800px" mx="auto" py={10} overflowY="auto">
-      <Flex justifyContent="center" mb={5}>
-        <Heading as="h3" size="lg">
-          FIIs & DIIs Table
-        </Heading>
-      </Flex>
+  if (loading) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        <Spinner size="xl" />
+      </Box>
+    );
+  }
 
-      <Table variant="striped" colorScheme="orange">
+  return (
+    <Box p={6}>
+      <Table variant="striped" colorScheme="teal">
         <Thead>
           <Tr>
-            <Th>FiiBuy (₹ Cr)</Th>
-            <Th>FiiSell (₹ Cr)</Th>
-            <Th>DiiBuy (₹ Cr)</Th>
-            <Th>DiiSell (₹ Cr)</Th>
-            <Th>NetBuy (₹ Cr)</Th>
-            <Th>NetSell (₹ Cr)</Th>
+            <Th>PROVISIONAL</Th>
+            <Th>Buy (Crores)</Th>
+            <Th>Sell (Crores)</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {data.map((row) => (
-            <Tr key={row.id}>
-              <Td>{row.FiiBuy ? row.FiiBuy : "-"}</Td>
-              <Td>{row.FiiSell ? row.FiiSell : "-"}</Td>
-              <Td>{row.DiiBuy ? row.DiiBuy : "-"}</Td>
-              <Td>{row.DiiSell ? row.DiiSell : "-"}</Td>
-              <Td>{row.NetBuy ? row.NetBuy : "-"}</Td>
-              <Td>{row.NetSell ? row.NetSell : "-"}</Td>
+          {data.map((row, index) => (
+            <Tr key={index}>
+              <Td>{row.PROVISONAL}</Td>
+              <Td>{row.buy}</Td>
+              <Td>{row.sell || "N/A"}</Td>
             </Tr>
           ))}
         </Tbody>
       </Table>
     </Box>
   );
-}
+};
+
+export default FiiDiiDataPage;

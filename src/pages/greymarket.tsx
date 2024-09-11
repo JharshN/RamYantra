@@ -48,7 +48,7 @@ export default function IPOData() {
         IPO Data
       </Heading>
 
-      <Table variant="simple">
+      <Table variant="striped">
         <Thead>
           <Tr>
             {/* <Th>ID</Th> */}
