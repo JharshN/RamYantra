@@ -60,7 +60,7 @@ export default function AdminPanel() {
   return (
     <>
       <Box p={4}>
-        <Container maxW="6xl">
+        <Container maxW="6xl" overflowY="auto">
           <Heading
             as="h1"
             mb={6}
@@ -68,7 +68,7 @@ export default function AdminPanel() {
             fontSize="3xl"
             color="blue.600"
           >
-            Admin Panel - User Submissions
+            Admin Panel - User Submissions For Consultancy
           </Heading>
           <Table variant="striped" colorScheme="blue">
             <Thead>
@@ -87,7 +87,9 @@ export default function AdminPanel() {
                   <Td>{contact.mobile}</Td>
                   <Td>{contact.message}</Td>
                   <Td>
-                    {contact.type === "be_hired" ? "I want to be hired" : "I want to hire"}
+                    {contact.type === "be_hired"
+                      ? "I want to be hired"
+                      : "I want to hire"}
                   </Td>
                   <Td>
                     <HStack spacing={4}>

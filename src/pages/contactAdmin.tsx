@@ -59,7 +59,7 @@ export default function AdminPanel() {
 
   return (
     <>
-      <Box p={4}>
+      <Box p={4} overflowY="auto">
         <Container maxW="6xl">
           <Heading
             as="h1"
