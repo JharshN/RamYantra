@@ -52,7 +52,7 @@ export default function RamyantraSection() {
               permanent recruitment-search and selection. <br />
               <Link href="https://wa.me/7874266271">
                 <Button colorScheme="whatsapp"> Connect Us On whatsapp</Button>
-              </Link>&nbsp;&nbsp; &nbsp;&nbsp;
+              </Link>&nbsp;&nbsp; &nbsp;&nbsp;<br />
               <Link href="/otherservice">
                 <Button colorScheme="blue"> Know More</Button>
               </Link>
