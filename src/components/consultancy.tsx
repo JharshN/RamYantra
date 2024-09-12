@@ -13,7 +13,9 @@ import {
 import Link from "next/link";
 
 export default function RamyantraSection() {
-  const bgColor = useColorModeValue("blue.50", "blue.800");
+  const bgColor = useColorModeValue("blue.50", "gray.900");
+  const headingColor = useColorModeValue("blue.600", "blue.200");
+  const textColor = useColorModeValue("gray.600", "gray.300");
 
   return (
     <Box bg={bgColor} py={10}>
@@ -30,20 +32,20 @@ export default function RamyantraSection() {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
-              color={"blue.600"}
+              color={headingColor}
             >
               Welcome to Ramyantra Consultancy Services
             </Heading>
 
-            <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
+            <Text color={textColor} fontSize={{ sm: "lg", md: "xl" }}>
               <b>JOB SEEKERS</b>
               <br /> We're glad you're here. We are all about you, first and
               foremost! We are about making your job search experience easier,
-              faster and more effective. Our easy-to follow search steps and
-              tips will help you make you job search the best it can be. Start
+              faster, and more effective. Our easy-to-follow search steps and
+              tips will help you make your job search the best it can be. Start
               searching now and enjoy!
               <br />
-              <b> FIND NEW ROLES EMPLOYERS</b>
+              <b>FIND NEW ROLES EMPLOYERS</b>
               <br /> We are a leader in the region with strong talents and a
               focus on the needs of others. Our solution portfolio includes
               comprehensive and integrated end-to-end HR solutions, including
@@ -51,10 +53,12 @@ export default function RamyantraSection() {
               temporary staffing, leadership hiring, payroll outsourcing, and
               permanent recruitment-search and selection. <br />
               <Link href="https://wa.me/7874266271">
-                <Button colorScheme="whatsapp"> Connect Us On whatsapp</Button>
-              </Link>&nbsp;&nbsp; &nbsp;&nbsp;<br />
+                <Button colorScheme="whatsapp">Connect Us On WhatsApp</Button>
+              </Link>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <br />
               <Link href="/otherservice">
-                <Button colorScheme="blue"> Know More</Button>
+                <Button colorScheme="blue">Know More</Button>
               </Link>
             </Text>
           </Stack>

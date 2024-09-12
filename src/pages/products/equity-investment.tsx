@@ -17,7 +17,7 @@ export default function EquityInvestmentBlog() {
         <Heading as="h1" fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}>
           Equity Investment: A Guide to Building Long-Term Wealth
         </Heading>
-        <Text color={"gray.500"} fontSize={{ base: "lg", md: "xl" }}>
+        <Text fontSize={{ base: "lg", md: "xl" }}>
           Explore how investing in equity can yield high returns, wealth
           creation, and ownership in growing companies.
         </Text>
@@ -38,7 +38,7 @@ export default function EquityInvestmentBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           What is Equity Investment?
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Equity investment refers to buying shares of a company, which
           represents ownership in the business. These shares can be acquired
           directly from the company or traded on stock exchanges. As an equity
@@ -54,28 +54,28 @@ export default function EquityInvestmentBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Why Invest in Equity?
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Investing in equity is one of the most powerful ways to build
           long-term wealth. While equity investment carries higher risk compared
           to other asset classes, it also has the potential to generate high
           returns. This is why it remains a popular choice for investors looking
           to grow their capital.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Equity investments offer the following advantages:
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>1. Ownership and Profit Sharing:</strong> As an equity
           investor, you are entitled to a share of the company’s profits,
           typically in the form of dividends. The more shares you own, the
           greater your share in the company’s profits.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>2. Capital Gains:</strong> Over time, if the value of the
           company increases, so does the value of your shares. You can sell your
           shares at a higher price than what you paid, realizing a capital gain.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>3. High Returns:</strong> Equities have historically
           outperformed other investment classes like bonds or commodities in the
           long term, offering higher returns to investors willing to take on the
@@ -90,16 +90,16 @@ export default function EquityInvestmentBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Types of Equity Investments
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Equity investments can be broadly categorized into two main types:
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>1. Direct Equity:</strong> This involves purchasing individual
           shares of a company listed on the stock exchange. You can buy and sell
           these shares based on your investment goals, market analysis, or
           company performance.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>2. Equity Mutual Funds:</strong> These funds pool money from
           multiple investors and invest in a diversified portfolio of equities.
           They are managed by professional fund managers, making them a suitable
@@ -115,25 +115,25 @@ export default function EquityInvestmentBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Risks of Equity Investments
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           While equity investment offers high returns, it is important to be
           aware of the risks involved. The stock market can be volatile, and the
           value of your equity investments can fluctuate significantly.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Some of the key risks associated with equity investments include:
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>1. Market Risk:</strong> The prices of shares can fall due to
           various external factors like economic downturns, political
           instability, or market speculation.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>2. Company-Specific Risk:</strong> If the company you have
           invested in underperforms or faces financial difficulties, the value
           of your shares could drop.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>3. Liquidity Risk:</strong> In some cases, it may be difficult
           to sell your shares quickly, especially during a market downturn,
           without incurring a significant loss.
@@ -147,7 +147,7 @@ export default function EquityInvestmentBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Conclusion
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Equity investment can be a powerful tool for building wealth over the
           long term. By taking on higher risk, investors can potentially reap
           high rewards in the form of dividends and capital gains. However, it’s

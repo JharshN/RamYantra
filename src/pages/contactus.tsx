@@ -59,7 +59,7 @@ export default function ContactUs() {
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>Contact Us</Heading>
-        <Text color={"gray.600"} fontSize={"xl"}>
+        <Text fontSize={"xl"}>
           We're here to help. Reach out to us for any inquiries, support, or
           information about our financial services.
         </Text>

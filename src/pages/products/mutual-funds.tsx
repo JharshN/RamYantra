@@ -17,7 +17,7 @@ export default function InvestmentOptionsBlog() {
         <Heading as="h1" fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}>
           Investment Options: Mutual Funds, Equity, Commodity, and Currency
         </Heading>
-        <Text color={"gray.500"} fontSize={{ base: "lg", md: "xl" }}>
+        <Text fontSize={{ base: "lg", md: "xl" }}>
           Explore the various financial investment opportunities to diversify
           your portfolio and achieve long-term returns.
         </Text>
@@ -38,31 +38,31 @@ export default function InvestmentOptionsBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Mutual Funds
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Mutual funds are investments that can be in debt, equity, or a mix of
           both. They offer professional management services at a lower cost.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           In a mutual fund, money from various investors is pooled together and
           invested in a portfolio of instruments. Mutual funds offer several
           advantages, including:
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Diversification:</strong> Mutual funds invest in a variety of
           instruments, providing investors with an effective means of
           diversification.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Professional Management:</strong> Managed by qualified fund
           managers, mutual funds are ideal for those who lack time or market
           expertise.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Low Cost:</strong> Buying mutual fund units is more affordable
           than buying individual stocks, allowing for a larger portfolio with
           the same capital.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Tax Benefits:</strong> Investments in mutual funds may offer
           tax advantages, including exemptions on dividends and tax deductions
           for specific types of funds.
@@ -76,29 +76,29 @@ export default function InvestmentOptionsBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Equity
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Equity represents ownership in a company and can be acquired through
           the contribution of capital. You can invest in equity for the
           long-term or trade with the intention to profit from market
           fluctuations.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Despite the inherent risks, equity offers investors high returns over
           the long term, contributing to personal wealth creation and national
           economic growth.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Benefits of Equity:</strong>
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Dividends:</strong> As a shareholder, you are entitled to a
           share of the company’s profits through dividends.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Value Appreciation:</strong> You can profit from selling your
           shares at a higher price than the purchase price on stock exchanges.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>High Returns:</strong> While risky, equity investments are
           known to provide returns that beat inflation and help in wealth
           creation.
@@ -112,25 +112,25 @@ export default function InvestmentOptionsBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Commodity
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           Commodities offer investors an excellent opportunity for portfolio
           diversification. Commodities are less affected by stock market
           fluctuations and offer a more predictable investment route.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Benefits of Commodity Trading:</strong>
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Diversification:</strong> Commodities add diversity to your
           portfolio by exposing you to an asset class different from equities,
           bonds, or mutual funds.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Predictability:</strong> Commodity prices are influenced by
           supply and demand fundamentals, making them relatively easier to
           predict than stocks.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Leverage and Liquidity:</strong> Commodity futures allow large
           transactions with lower cash, offering both liquidity and leverage.
         </Text>
@@ -143,28 +143,28 @@ export default function InvestmentOptionsBlog() {
         <Heading as="h2" fontSize={"3xl"}>
           Currency
         </Heading>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           The currency market is highly liquid and open 24 hours a day, offering
           traders the flexibility to transact at any time. While currency
           trading is risky, it can serve as an effective tool to diversify and
           expand your portfolio.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Advantages of Currency Trading:</strong>
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>High Liquidity:</strong> The large number of trades ensures
           high liquidity, allowing easy entry and exit from the market.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Low Transaction Costs:</strong> Currency trading involves low
           spreads, reducing the overall cost of transactions for traders.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>Leverage:</strong> With the use of margin, large transactions
           can be carried out with relatively small cash amounts.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8}>
           <strong>24-Hour Trading:</strong> Currency markets remain open round
           the clock, offering unparalleled flexibility for traders.
         </Text>

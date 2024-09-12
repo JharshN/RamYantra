@@ -17,7 +17,7 @@ export default function AIFsAndPMSBlog() {
         <Heading as="h1" fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}>
           AIFs and PMS: Investment Options for HNIs
         </Heading>
-        <Text color={"gray.500"} fontSize={{ base: "lg", md: "xl" }}>
+        <Text  fontSize={{ base: "lg", md: "xl" }}>
           A detailed guide on AIFs and PMS for High-Net-Worth Individuals (HNIs)
         </Text>
       </VStack>
@@ -34,25 +34,25 @@ export default function AIFsAndPMSBlog() {
 
       {/* Blog Content */}
       <Stack spacing={6} mt={10}>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8} >
           Both Alternative Investment Funds (AIFs) and Portfolio Management
           Services (PMS) are great investment options for High-Net-Worth
           Individuals (HNIs) to diversify their portfolios and earn higher
           long-term returns on their capital, albeit at higher risk.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8} >
           As a part of our offering, we provide access to various AIFs and PMS
           avenues. We believe that a careful allocation in them by investors can
           expand their investment horizon and provide the right diversification,
           thereby reducing overall portfolio volatility.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8} >
           At Ramyantra Consultancy Services, we have tie-ups with various
           product developers, offering solutions suited to meet our clients'
           needs. The ticket size for PMS starts at ₹50 Lakhs, while AIFs have a
           minimum investment threshold of ₹1 Crore.
         </Text>
-        <Text fontSize="lg" lineHeight={1.8} color={"gray.600"}>
+        <Text fontSize="lg" lineHeight={1.8} >
           By investing in PMS and AIFs, investors can benefit from a
           well-diversified portfolio that targets long-term growth and reduces
           the impact of short-term market volatility.
