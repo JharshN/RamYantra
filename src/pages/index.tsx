@@ -26,12 +26,12 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="RamYantra"
-        description="RamYantra Financial Services provides top-notch financial solutions, specializing in equity, insurance,  bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+        title="ramyantara.com"
+        description="ramyantara Financial Services provides top-notch financial solutions, specializing in equity, insurance,  bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         openGraph={{
           url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
-          title: "Ramyantra",
-          description: "Home page of RamYantra",
+          title: "ramyantara",
+          description: "Home page of ramyantara",
           images: [
             {
               url: "https://blobimageshikshafinder.blob.core.windows.net/shikshafinder/yantramaya.png",
@@ -44,8 +44,8 @@ export default function Home() {
       />
       <Head>
         <meta
-          name="Ramyantra"
-          content="Ramyantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+          name="ramyantara"
+          content="ramyantara Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
@@ -75,7 +75,7 @@ export default function Home() {
                   zIndex: -1,
                 }}
               >
-                Ramyantra
+                ramyantara
               </Text>
               <br />
               <Text as={"span"} color={"blue.400"}>
@@ -83,7 +83,7 @@ export default function Home() {
               </Text>
             </Heading>
             <Text>
-              <b>Ramyantra Financial Services</b> provides top-notch financial
+              <b>ramyantara Financial Services</b> provides top-notch financial
               solutions, specializing in equity, insurance, bonds, PMS/AIF,
               currency, commodities, mutual funds, and loans & fixed deposits.
             </Text>
@@ -135,7 +135,7 @@ export default function Home() {
             >
               <Image
                 src="/x0jWYq6aSku1T9dV2CFF7w.webp"
-                alt="ramyantra image"
+                alt="ramyantara image"
                 width={600}
                 height={300}
               />

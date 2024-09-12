@@ -65,7 +65,7 @@ export default function WithSubnavigation() {
           >
             <a href="/">
               {" "}
-              <b>RamYantra</b>
+              <b>ramyantara</b>
             </a>
           </Text>
 

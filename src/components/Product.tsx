@@ -62,7 +62,7 @@ export default function GridListWithHeading() {
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>Our Products & Services</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
-          At Ramyantra Financial Services, we provide a wide range of financial
+          At ramyantara Financial Services, we provide a wide range of financial
           products and services designed to meet your needs. Whether you're
           looking to invest, insure, or grow your wealth, we've got you covered.
         </Text>

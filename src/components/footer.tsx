@@ -162,7 +162,7 @@ export default function LargeWithLogoCentered() {
           <img src="/ramyantra.png" alt="logo" width={300} height={300} />
         </Flex>
         <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-          © 2024 RamYantra. All rights reserved{" "}
+          © 2024 ramyantara. All rights reserved{" "}
           <a href="https://ramyantara.com/privacypolicy"> Privacy Policy</a>
         </Text>
       </Box>

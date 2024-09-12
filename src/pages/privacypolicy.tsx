@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
         </Heading>
 
         <Text fontSize="lg" color="gray.700">
-          At Ramyantra Financial Services, your privacy is of utmost importance
+          At ramyantara Financial Services, your privacy is of utmost importance
           to us. This privacy policy outlines the types of personal information
           we collect, how we use it, and the steps we take to safeguard your
           data.

@@ -34,7 +34,7 @@ export default function RamyantraSection() {
               fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
               color={headingColor}
             >
-              Welcome to Ramyantra Consultancy Services
+              Welcome to ramyantara Consultancy Services
             </Heading>
 
             <Text color={textColor} fontSize={{ sm: "lg", md: "xl" }}>
@@ -67,7 +67,7 @@ export default function RamyantraSection() {
           <Box flex={1} justifyContent={"center"} alignItems={"center"}>
             <Image
               rounded={"lg"}
-              alt={"Ramyantra Consultancy Services"}
+              alt={"ramyantara Consultancy Services"}
               src={"/consultancy.webp"}
               objectFit={"cover"}
             />

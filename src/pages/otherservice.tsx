@@ -56,7 +56,7 @@ export default function ContactUs() {
           {/* Left Section - Text and Image */}
           <VStack align={"start"} spacing={6} textAlign={"left"}>
             <Heading fontSize={"3xl"} color="blue.700">
-              Welcome to Ramyantra Consultancy
+              Welcome to ramyantara Consultancy
             </Heading>
             <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
               Whether you're a job seeker or an employer, we're here to support

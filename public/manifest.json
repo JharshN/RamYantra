@@ -4,9 +4,9 @@
     "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
-    "name": "RamYantra",
-    "short_name": "RamYantra",
-    "description": "RamYantra Financial Services",
+    "name": "ramyantara",
+    "short_name": "ramyantara",
+    "description": "ramyantara Financial Services",
     "icons": [
         {
             "src": "/icon-384x384.png",

@@ -66,7 +66,7 @@ const Index = () => {
               maxW="600px"
               lineHeight={1.2}
             >
-              Get started with Ramyantra from home page 🫡
+              Get started with ramyantara from home page 🫡
             </chakra.h1>
 
             <Stack direction={{ base: "column", md: "row" }} spacing={3}>

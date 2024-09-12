@@ -41,10 +41,14 @@ export default function App({
         {/* <Analytics /> */}
 
         <Head>
-          <title>ramyantara</title>
+          <title>ramyantara.com</title>
           <meta
-            name="Ramyantra"
-            content="Ramyantra Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+            name="Ramyantara.com"
+            content="ramyantara Financial Services provides top-notch financial solutions, specializing in equity, insurance, bonds & NCDs, PMS/AIF, currency, commodities, mutual funds, and loans & fixed deposits."
+          />
+          <meta
+            name="google-site-verification"
+            content="OKVnDKVN_aY9YQ3zNgp35ZIC0Q6tbbEHulOUKOSMna8"
           />
         </Head>
         <ChakraProvider theme={theme}>
