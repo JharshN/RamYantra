@@ -17,8 +17,8 @@ const AboutUs = () => {
       </Flex>
 
       {/* Company Details Section */}
-      <Box bg="white" boxShadow="lg" p={8} rounded="lg">
-        <Text fontSize="xl" color="purple.700" mb={4}>
+      <Box  boxShadow="lg" p={8} rounded="lg">
+        <Text fontSize="xl" color="blue.500" mb={4}>
           <b>Ramyantara</b> is a Sanskrit word Which means{" "}
           <b>pleasantly diversified</b>
         </Text>

@@ -96,7 +96,7 @@ export default function ContactUs() {
               </Link>
             </HStack>
 
-            <Text fontSize={"lg"} color={"gray.600"}>
+            <Text fontSize={"lg"} >
               Address: 316, Times Galaxy, Near Cinezza Multiplex, Nr. D Mart,
               Ugat Canal Road, Jahangirpura 395005
             </Text>
