@@ -106,7 +106,6 @@ export default function ProductPage() {
               borderRadius="lg"
               overflow="hidden"
               p={4}
-              bg="white"
               boxShadow="md"
               _hover={{ boxShadow: "lg" }}
             >
@@ -119,7 +118,7 @@ export default function ProductPage() {
               />
               <Stack spacing={2}>
                 <Heading fontSize="xl">{product.name}</Heading>
-                <Text color="gray.600">{product.description}</Text>
+                <Text >{product.description}</Text>
                 <Link href={product.productsUrl} isExternal>
                   <Button
                     colorScheme="blue"

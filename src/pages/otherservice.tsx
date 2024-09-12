@@ -50,7 +50,7 @@ export default function ContactUs() {
   };
 
   return (
-    <Box p={4} bg="gray.50" minH="100vh">
+    <Box p={4}  minH="100vh">
       <Container maxW="6xl" py={10}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           {/* Left Section - Text and Image */}
@@ -58,7 +58,7 @@ export default function ContactUs() {
             <Heading fontSize={"3xl"} color="blue.700">
               Welcome to ramyantara Consultancy
             </Heading>
-            <Text color={"gray.600"} fontSize={{ sm: "lg", md: "xl" }}>
+            <Text  fontSize={{ sm: "lg", md: "xl" }}>
               Whether you're a job seeker or an employer, we're here to support
               you. Find your next opportunity or hire the best talent with us.
             </Text>
@@ -74,7 +74,6 @@ export default function ContactUs() {
 
           {/* Right Section - Contact Form */}
           <VStack
-            bg="white"
             p={8}
             borderRadius="md"
             boxShadow="lg"
@@ -84,7 +83,7 @@ export default function ContactUs() {
             <Heading fontSize={"2xl"} color="blue.700">
               Get in Touch
             </Heading>
-            <Text color={"gray.500"} fontSize="md">
+            <Text  fontSize="md">
               We're here to assist you. Please fill out the form below, and
               we'll get back to you as soon as possible.
             </Text>
@@ -92,7 +91,7 @@ export default function ContactUs() {
               {...register("name", { required: true })}
               placeholder="Your Name"
               size="lg"
-              focusBorderColor="blue.500"
+              // focusBorderColor="blue.500"
             />
             <Input
               {...register("mobile", { required: true })}

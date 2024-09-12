@@ -18,6 +18,7 @@ export default function IndicesData() {
   const [indicesData, setIndicesData] = useState<
     { id: number; Indices: string; Closing: number; plusMinus: number }[]
   >([]);
+  const [date, setDate] = useState<{ date: string }[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch data from Supabase
@@ -35,6 +36,20 @@ export default function IndicesData() {
     fetchIndices();
   }, []);
 
+  useEffect(() => {
+    const fetchDate = async () => {
+      const { data, error } = await supabase.from("date").select(" date"); // Replace 'Indices' with your actual table name
+      if (error) {
+        console.error("Error fetching Indices data:", error);
+      } else {
+        setDate(data);
+      }
+      // setLoading(false);
+    };
+
+    fetchDate();
+  }, []);
+
   if (loading) {
     return (
       <Box textAlign="center" mt={10}>
@@ -48,9 +63,9 @@ export default function IndicesData() {
     <>
       <Container maxW="container.lg" py={6} overflowY="auto">
         <Heading as="h1" size="xl" textAlign="center" mb={6}>
-          Indices Data
+          Indices Data 
         </Heading>
-
+<Heading as="h3" size="md" textAlign="center" mb={6}>As on {date.length > 0 ? date[0].date : ""}</Heading>
         <Table variant="striped">
           <Thead>
             <Tr>

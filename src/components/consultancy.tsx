@@ -39,19 +39,27 @@ export default function RamyantraSection() {
 
             <Text color={textColor} fontSize={{ sm: "lg", md: "xl" }}>
               <b>JOB SEEKERS</b>
-              <br /> We're glad you're here. We are all about you, first and
-              foremost! We are about making your job search experience easier,
-              faster, and more effective. Our easy-to-follow search steps and
-              tips will help you make your job search the best it can be. Start
-              searching now and enjoy!
+              <br />{" "}
+              <Text color={textColor} fontSize={{ sm: "lg", md: "xl" }}>
+                We're glad you're here. We are all about you, first and
+                foremost! We are about making your job search experience easier,
+                faster, and more effective. Our easy-to-follow search steps and
+                tips will help you make your job search the best it can be.
+                Start searching now and enjoy!
+                <br />
+              </Text>
               <br />
               <b>FIND NEW ROLES EMPLOYERS</b>
-              <br /> We are a leader in the region with strong talents and a
-              focus on the needs of others. Our solution portfolio includes
-              comprehensive and integrated end-to-end HR solutions, including
-              talent mapping, salary/compensation benchmarking, consultation,
-              temporary staffing, leadership hiring, payroll outsourcing, and
-              permanent recruitment-search and selection. <br />
+              <br />
+              <Text color={textColor} fontSize={{ sm: "lg", md: "xl" }}>
+                {" "}
+                We are a leader in the region with strong talents and a focus on
+                the needs of others. Our solution portfolio includes
+                comprehensive and integrated end-to-end HR solutions, including
+                talent mapping, salary/compensation benchmarking, consultation,
+                temporary staffing, leadership hiring, payroll outsourcing, and
+                permanent recruitment-search and selection. <br />
+              </Text>
               <Link href="https://wa.me/7874266271">
                 <Button colorScheme="whatsapp">Connect Us On WhatsApp</Button>
               </Link>

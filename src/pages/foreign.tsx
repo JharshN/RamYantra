@@ -1,5 +1,4 @@
 import React, { ReactNode, useEffect, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
 import {
   Table,
   Thead,
@@ -11,9 +10,11 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import supabase from "../../supabase";
-
+import { Heading } from "@chakra-ui/react";
 
 const FiiDiiDataPage = () => {
+
+
   const [data, setData] = useState<
     {
       PROVISONAL: ReactNode;
@@ -21,7 +22,10 @@ const FiiDiiDataPage = () => {
       buy: string;
     }[]
   >([]);
+
   const [loading, setLoading] = useState(true);
+
+  const [date, setDate] = useState<{ date: string }[]>([]);
 
   // Fetch data from Supabase
   useEffect(() => {
@@ -39,6 +43,22 @@ const FiiDiiDataPage = () => {
     fetchData();
   }, []);
 
+  
+
+  useEffect(() => {
+    const fetchDate = async () => {
+      const { data, error } = await supabase.from("date").select(" date"); // Replace 'Indices' with your actual table name
+      if (error) {
+        console.error("Error fetching Indices data:", error);
+      } else {
+        setDate(data);
+      }
+      // setLoading(false);
+    };
+
+    fetchDate();
+  }, []);
+
   if (loading) {
     return (
       <Box
@@ -54,6 +74,12 @@ const FiiDiiDataPage = () => {
 
   return (
     <Box p={6}>
+      <Heading as="h1" size="xl" textAlign="center" mb={6}>
+        FII DII Data
+      </Heading>
+      <Heading as="h3" size="md" textAlign="center" mb={6}>
+        As on {date.length > 0 ? date[0].date : ""}
+      </Heading>
       <Table variant="striped" colorScheme="teal">
         <Thead>
           <Tr>
