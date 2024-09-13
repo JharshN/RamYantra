@@ -150,7 +150,7 @@ export default function Home() {
       <br />
       <Consultancy />
       <br />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

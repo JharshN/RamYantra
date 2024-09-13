@@ -70,7 +70,7 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"/products/pms-aif-services"}>
               PMS/AIF
             </Box>
-            <Box as="a" href={"/products/currancy-trading"}>
+            <Box as="a" href={"/products/currency-trading"}>
               Currency
             </Box>
           </Stack>

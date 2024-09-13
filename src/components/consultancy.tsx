@@ -60,10 +60,12 @@ export default function RamyantraSection() {
                 temporary staffing, leadership hiring, payroll outsourcing, and
                 permanent recruitment-search and selection. <br />
               </Text>
-              <Link href="https://wa.me/7874266271">
-                <Button colorScheme="whatsapp">Connect Us On WhatsApp</Button>
-              </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              <br />
+              <div>
+                <Link href="https://wa.me/7874266271">
+                  <Button colorScheme="whatsapp">Connect Us On WhatsApp</Button>
+                </Link>
+              </div>
               <br />
               <Link href="/otherservice">
                 <Button colorScheme="blue">Know More</Button>

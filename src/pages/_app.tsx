@@ -6,6 +6,7 @@ import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { useState } from "react";
 import AuthContextProvider from "@/context";
+import Footer from "../components/footer";
 import Head from "next/head";
 require("dotenv").config();
 
@@ -56,6 +57,7 @@ export default function App({
             <div className={inter.className}>
               <Navbar />
               <Component {...pageProps} />
+              <Footer />
             </div>
           </AuthContextProvider>
         </ChakraProvider>

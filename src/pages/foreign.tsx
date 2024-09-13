@@ -8,6 +8,7 @@ import {
   Td,
   Box,
   Spinner,
+  Container,
 } from "@chakra-ui/react";
 import supabase from "../../supabase";
 import { Heading } from "@chakra-ui/react";
@@ -73,7 +74,9 @@ const FiiDiiDataPage = () => {
   }
 
   return (
-    <Box p={6}>
+            <Container maxW={"5xl"} py={12}>
+
+    <Box p={6} overflowY="auto">
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
         FII DII Data
       </Heading>
@@ -99,6 +102,7 @@ const FiiDiiDataPage = () => {
         </Tbody>
       </Table>
     </Box>
+  </Container>
   );
 };
 

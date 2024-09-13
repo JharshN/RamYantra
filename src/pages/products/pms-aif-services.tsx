@@ -25,7 +25,7 @@ export default function AIFsAndPMSBlog() {
       {/* Image Placeholder */}
       <Box mt={8}>
         <Image
-          src="https://images.unsplash.com/photo-1642388755321-d6665f3ac3b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9uZXklMjBmcmVlfGVufDB8fDB8fHww" // Replace with actual image URL
+          src="https://images.unsplash.com/photo-1504607798333-52a30db54a5d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with actual image URL
           alt="AIFs and PMS"
           borderRadius="lg"
           objectFit="cover"

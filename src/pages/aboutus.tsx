@@ -1,9 +1,19 @@
 import React from "react";
-import { Box, Heading, Text, Flex, Button, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Button, Link, Container } from "@chakra-ui/react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
+        <Container maxW={{
+    base: "container.",
+    md: "container.md",
+    lg: "container.lg",
+        }} py={{
+    base: "2",
+    md: "12",
+    lg: "16",
+        }}>
+
     <Box p={10}>
       {/* Header Section */}
       <Flex direction="column" alignItems="center" textAlign="center" mb={8}>
@@ -51,6 +61,7 @@ const AboutUs = () => {
         </Button>
       </Flex>
     </Box>
+  </Container>
   );
 };
 
