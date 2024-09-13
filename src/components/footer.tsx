@@ -64,7 +64,7 @@ export default function LargeWithLogoCentered() {
                 Insurance
               </Box>
             </Stack>
-            <Box as="a" href={"/products/bond-investment"}>
+            <Box as="a" href={"/products/bond-investments"}>
               Bonds & NCDs
             </Box>
             <Box as="a" href={"/products/pms-aif-services"}>
