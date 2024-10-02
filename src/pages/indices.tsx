@@ -61,7 +61,7 @@ export default function IndicesData() {
 
   return (
     <>
-      <Container maxW="container.lg" py={6} overflowY="auto">
+      <Container maxW="container.lg" py={6}>
         <Heading as="h1" size="xl" textAlign="center" mb={6}>
           Indices Data 
         </Heading>

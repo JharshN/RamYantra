@@ -75,8 +75,7 @@ const FiiDiiDataPage = () => {
 
   return (
             <Container maxW={"5xl"} py={12}>
-
-    <Box p={6} overflowY="auto">
+    <Box >
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
         FII DII Data
       </Heading>

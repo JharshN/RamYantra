@@ -43,35 +43,37 @@ export default function IPOData() {
   }
 
   return (
-    <Container maxW="container.lg" py={6} overflowY="auto">
+    <Container maxW="container.lg" overflowX="auto" p={3}>
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
-        IPO Data
+      IPO Data
       </Heading>
 
+      <Box overflowX="auto">
       <Table variant="striped">
         <Thead>
-          <Tr>
-            {/* <Th>ID</Th> */}
-            <Th>Name</Th>
-            <Th>Date</Th>
-            <Th>Price</Th>
-            <Th>Lot</Th>
-            <Th>GMP</Th>
-          </Tr>
+        <Tr>
+          {/* <Th>ID</Th> */}
+          <Th>Name</Th>
+          <Th>Date</Th>
+          <Th>Price</Th>
+          <Th>Lot</Th>
+          <Th>GMP</Th>
+        </Tr>
         </Thead>
         <Tbody>
-          {ipoData.map((ipo) => (
-            <Tr key={ipo.id}>
-              {/* <Td>{ipo.id}</Td> */}
-              <Td>{ipo.Name}</Td>
-              <Td>{ipo.date}</Td>
-              <Td>{ipo.Price}</Td>
-              <Td>{ipo.Lot}</Td>
-              <Td>{ipo.GMP}</Td>
-            </Tr>
-          ))}
+        {ipoData.map((ipo) => (
+          <Tr key={ipo.id}>
+          {/* <Td>{ipo.id}</Td> */}
+          <Td>{ipo.Name}</Td>
+          <Td>{ipo.date}</Td>
+          <Td>{ipo.Price}</Td>
+          <Td>{ipo.Lot}</Td>
+          <Td>{ipo.GMP}</Td>
+          </Tr>
+        ))}
         </Tbody>
       </Table>
+      </Box>
     </Container>
   );
 }

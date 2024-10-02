@@ -126,7 +126,7 @@ const BlogCards = () => {
                       _hover={{ bg: useColorModeValue("gray.200", "gray.700") }}
                     >
                       <Link href={article.href}>
-                        <Text fontSize="sm"> Know More</Text>
+                        <Text fontSize="sm"> Know More </Text>
                       </Link>
                       <Icon as={GoChevronRight} w={4} h={4} />
                     </HStack>
