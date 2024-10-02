@@ -15,7 +15,16 @@ import {
 import supabase from "../../supabase";
 
 export default function IPOData() {
-  const [ipoData, setIpoData] = useState<{ id: number; Name: string; date: string; Price: number; Lot: number; GMP: number; }[]>([]);
+  const [ipoData, setIpoData] = useState<
+    {
+      id: number;
+      Name: string;
+      date: string;
+      Price: number;
+      Lot: number;
+      GMP: number;
+    }[]
+  >([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch data from Supabase
@@ -43,36 +52,36 @@ export default function IPOData() {
   }
 
   return (
-    <Container maxW="container.lg" overflowX="auto" p={3}>
+    <Container maxW="container.lg" overflowX="auto" p={3} overflowY={"auto"}>
       <Heading as="h1" size="xl" textAlign="center" mb={6}>
-      IPO Data
+        IPO Data
       </Heading>
 
       <Box overflowX="auto">
-      <Table variant="striped">
-        <Thead>
-        <Tr>
-          {/* <Th>ID</Th> */}
-          <Th>Name</Th>
-          <Th>Date</Th>
-          <Th>Price</Th>
-          <Th>Lot</Th>
-          <Th>GMP</Th>
-        </Tr>
-        </Thead>
-        <Tbody>
-        {ipoData.map((ipo) => (
-          <Tr key={ipo.id}>
-          {/* <Td>{ipo.id}</Td> */}
-          <Td>{ipo.Name}</Td>
-          <Td>{ipo.date}</Td>
-          <Td>{ipo.Price}</Td>
-          <Td>{ipo.Lot}</Td>
-          <Td>{ipo.GMP}</Td>
-          </Tr>
-        ))}
-        </Tbody>
-      </Table>
+        <Table variant="striped">
+          <Thead>
+            <Tr>
+              {/* <Th>ID</Th> */}
+              <Th>Name</Th>
+              <Th>Date</Th>
+              <Th>Price</Th>
+              <Th>Lot</Th>
+              <Th>GMP</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {ipoData.map((ipo) => (
+              <Tr key={ipo.id}>
+                {/* <Td>{ipo.id}</Td> */}
+                <Td>{ipo.Name}</Td>
+                <Td>{ipo.date}</Td>
+                <Td>{ipo.Price}</Td>
+                <Td>{ipo.Lot}</Td>
+                <Td>{ipo.GMP}</Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
       </Box>
     </Container>
   );

@@ -74,34 +74,34 @@ const FiiDiiDataPage = () => {
   }
 
   return (
-            <Container maxW={"5xl"} py={12}>
-    <Box >
-      <Heading as="h1" size="xl" textAlign="center" mb={6}>
-        FII DII Data
-      </Heading>
-      <Heading as="h3" size="md" textAlign="center" mb={6}>
-        As on {date.length > 0 ? date[0].date : ""}
-      </Heading>
-      <Table variant="striped" colorScheme="teal">
-        <Thead>
-          <Tr>
-            <Th>PROVISIONAL</Th>
-            <Th>Buy (Crores)</Th>
-            <Th>Sell (Crores)</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          {data.map((row, index) => (
-            <Tr key={index}>
-              <Td>{row.PROVISONAL}</Td>
-              <Td>{row.buy}</Td>
-              <Td>{row.sell || "N/A"}</Td>
+    <Container maxW={"5xl"} py={12} overflowY={"auto"}>
+      <Box>
+        <Heading as="h1" size="xl" textAlign="center" mb={6}>
+          FII DII Data
+        </Heading>
+        <Heading as="h3" size="md" textAlign="center" mb={6}>
+          As on {date.length > 0 ? date[0].date : ""}
+        </Heading>
+        <Table variant="striped" colorScheme="teal">
+          <Thead>
+            <Tr>
+              <Th>PROVISIONAL</Th>
+              <Th>Buy (Crores)</Th>
+              <Th>Sell (Crores)</Th>
             </Tr>
-          ))}
-        </Tbody>
-      </Table>
-    </Box>
-  </Container>
+          </Thead>
+          <Tbody>
+            {data.map((row, index) => (
+              <Tr key={index}>
+                <Td>{row.PROVISONAL}</Td>
+                <Td>{row.buy}</Td>
+                <Td>{row.sell || "N/A"}</Td>
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Box>
+    </Container>
   );
 };
 
