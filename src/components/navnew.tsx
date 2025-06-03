@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import Link from "next/link";
-import{
+import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
-  Button
-} from "@chakra-ui/react"
+  Button,
+} from "@chakra-ui/react";
 
 function Navnew() {
   return (
@@ -26,14 +26,17 @@ function Navnew() {
         <Link href={"/greymarket"}>
           <MenuItem>IPOs</MenuItem>
         </Link>
-        <Link href={"/products"}> 
+        <Link href={"/products"}>
           <MenuItem>
             <b>Our Products</b>
           </MenuItem>
+        </Link>
+        <Link href={"/unlisted-stocks"}>
+          <MenuItem>Unlisted Stocks</MenuItem>
         </Link>
       </MenuList>
     </Menu>
   );
 }
 
-export default Navnew
+export default Navnew;

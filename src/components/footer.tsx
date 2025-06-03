@@ -67,6 +67,9 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={"/products/bond-investments"}>
               Bonds & NCDs
             </Box>
+            <Box as="a" href={"/unlisted-stocks"}>
+              Unlisted Stocks
+            </Box>
             <Box as="a" href={"/products/pms-aif-services"}>
               PMS/AIF
             </Box>

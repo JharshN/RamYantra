@@ -22,7 +22,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function Home() {
-
   return (
     <>
       <NextSeo
@@ -92,20 +91,17 @@ export default function Home() {
               direction={{ base: "column", sm: "row" }}
             >
               <Navnew />
-              <a
-                href="https://diy.sharekhan.com/app/Account/Register?grpcd=10651&type=fr&grpid=11040&fbclid=PAAabdnX-9xgCg5sB2Ieo2tDUdhuJi-_6mmQUOyg1jTwNVz-GigtR9D87wlcg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="/unlisted-stocks" passHref>
                 <Button
                   rounded={"full"}
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
+                  colorScheme="green"
                 >
-                  Open Demat Account
+                  View Unlisted Stocks
                 </Button>
-              </a>
+              </Link>
             </Stack>
           </Stack>
           <Flex
@@ -146,7 +142,7 @@ export default function Home() {
       <br />
       <Info />
       <br />
-      <Product/>
+      <Product />
       <br />
       <Consultancy />
       <br />
