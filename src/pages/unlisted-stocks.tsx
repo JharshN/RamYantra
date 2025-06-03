@@ -34,6 +34,7 @@ function StockCard({ stock }: { stock: (typeof stocks)[0] }) {
       mb={4}
       maxW="400px"
     >
+    {/* // */}
       <Box mr={4} minW="60px">
         <Image src={stock.logo} alt={stock.name} width={60} height={30} />
       </Box>
