@@ -1,27 +1,26 @@
-import { Box, Container, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  SimpleGrid,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
+import { useEffect, useState } from "react";
+import supabase from "../../supabase";
 
-const stocks = [
-  {
-    name: "Polymatech Unlisted Shares",
-    logo: "/polymatech-logo.png", // Place this image in public/
-    price: 118,
-    change: 62,
-    changePercent: 110.71,
-    days: 15,
-  },
-  {
-    name: "Example Unlisted Shares",
-    logo: "/example-logo.png", // Place this image in public/
-    price: 210,
-    change: 10,
-    changePercent: 5.0,
-    days: 7,
-  },
-];
+type Stock = {
+  name: string;
+  logo: string;
+  price: number;
+  change: number;
+  changePercent: number;
+  days: number;
+};
 
-function StockCard({ stock }: { stock: (typeof stocks)[0] }) {
+function StockCard({ stock }: { stock: Stock }) {
   return (
     <Box
       display="flex"
@@ -34,7 +33,6 @@ function StockCard({ stock }: { stock: (typeof stocks)[0] }) {
       mb={4}
       maxW="400px"
     >
-    {/* // */}
       <Box mr={4} minW="60px">
         <Image src={stock.logo} alt={stock.name} width={60} height={30} />
       </Box>
@@ -52,6 +50,40 @@ function StockCard({ stock }: { stock: (typeof stocks)[0] }) {
 }
 
 export default function UnlistedStocks() {
+  const [stocks, setStocks] = useState<Stock[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStocks = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("unlisted_shares")
+          .select("*");
+
+        if (error) {
+          console.error("Error fetching stocks:", error);
+        } else {
+          setStocks(data || []);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStocks();
+  }, []);
+
+  if (loading) {
+    return (
+      <Container maxW="4xl" py={10} textAlign="center">
+        <Spinner size="xl" />
+        <Text mt={4}>Loading stocks...</Text>
+      </Container>
+    );
+  }
+
   return (
     <>
       <NextSeo
