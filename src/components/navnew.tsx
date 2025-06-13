@@ -34,6 +34,9 @@ function Navnew() {
         <Link href={"/unlisted-stocks"}>
           <MenuItem>Unlisted Stocks</MenuItem>
         </Link>
+        <Link href={"/investments"}>
+          <MenuItem>Investment Dashboard</MenuItem>
+        </Link>
       </MenuList>
     </Menu>
   );

@@ -22,7 +22,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function Home() {
-
   return (
     <>
       <NextSeo
@@ -146,7 +145,7 @@ export default function Home() {
       <br />
       <Info />
       <br />
-      <Product/>
+      <Product />
       <br />
       <Consultancy />
       <br />
