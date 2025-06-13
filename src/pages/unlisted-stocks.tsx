@@ -59,7 +59,7 @@ export default function UnlistedStocks() {
         const { data, error } = await supabase
           .from("unlisted_shares")
           .select("*");
-
+        //here we are fetching the data from the unlisted_shares table
         if (error) {
           console.error("Error fetching stocks:", error);
         } else {
