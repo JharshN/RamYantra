@@ -129,8 +129,9 @@ const DesktopNav = () => {
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
+                maxW={"sm"}
               >
-                <Stack>
+                <Stack spacing={2}>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -156,7 +157,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       _hover={{ bg: useColorModeValue("blue.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
-        <Box>
+        <Box flex="1">
           <Text
             transition={"all .3s ease"}
             _groupHover={{ color: "blue.400" }}
@@ -164,7 +165,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          <Text
+            fontSize={"sm"}
+            color={useColorModeValue("gray.600", "gray.400")}
+          >
+            {subLabel}
+          </Text>
         </Box>
         <Flex
           transition={"all .3s ease"}
@@ -173,7 +179,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
           justify={"flex-end"}
           align={"center"}
-          flex={1}
         >
           <Icon color={"blue.400"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
@@ -281,6 +286,26 @@ const NAV_ITEMS: Array<NavItem> = [
         label: "Suggestions on Stocks",
         subLabel: "Pick the best stocks",
         href: "/watchlist",
+      },
+    ],
+  },
+  {
+    label: "Investments",
+    children: [
+      {
+        label: "NCDs",
+        subLabel: "Non-Convertible Debentures",
+        href: "/investments/",
+      },
+      {
+        label: "Unlisted Shares",
+        subLabel: "Pre-IPO Investment Opportunities",
+        href: "/investments/",
+      },
+      {
+        label: "Insurance Products",
+        subLabel: "Life and Health Insurance Solutions",
+        href: "/investments/",
       },
     ],
   },
