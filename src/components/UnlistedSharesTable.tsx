@@ -4,13 +4,13 @@ import DataTable from "./DataTable";
 import supabase from "../../supabase";
 
 interface UnlistedShare {
-  id: string;
-  stock_name: string;
+  id: number;
+  name: string;
+  logo: string;
   price: number;
-  min_quantity: number;
-  sector: string;
-  description: string;
-  created_at: string;
+  change: number;
+  change_percent: number;
+  days: number;
 }
 
 const UnlistedSharesTable = () => {
@@ -19,11 +19,11 @@ const UnlistedSharesTable = () => {
   const [error, setError] = useState<string | null>(null);
 
   const columns = [
-    { header: "Stock Name", accessor: "stock_name" },
+    { header: "Name", accessor: "name" },
     { header: "Price (₹)", accessor: "price", isNumeric: true },
-    { header: "Minimum Quantity", accessor: "min_quantity", isNumeric: true },
-    { header: "Sector", accessor: "sector" },
-    { header: "Description", accessor: "description" },
+    { header: "Change", accessor: "change", isNumeric: true },
+    { header: "% Change", accessor: "change_percent", isNumeric: true },
+    { header: "Days", accessor: "days", isNumeric: true },
   ];
 
   useEffect(() => {
@@ -31,8 +31,7 @@ const UnlistedSharesTable = () => {
       try {
         const { data, error } = await supabase
           .from("unlisted_shares")
-          .select("*")
-          .order("created_at", { ascending: false });
+          .select("id, name, logo, price, change, change_percent, days");
 
         if (error) throw error;
         setShares(data || []);
@@ -64,7 +63,7 @@ const UnlistedSharesTable = () => {
   }
 
   return (
-    <Box>
+    <Box w="100%" overflowX="auto">
       <Heading size="lg" mb={6}>
         Unlisted Shares
       </Heading>
