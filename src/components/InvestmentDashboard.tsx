@@ -18,7 +18,6 @@ import InsuranceProductsTable from "./InsuranceProductsTable";
 
 // Sample data - replace with actual data from your backend
 
-
 const InvestmentDashboard = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const bgColor = useColorModeValue("white", "gray.800");
@@ -47,9 +46,15 @@ const InvestmentDashboard = () => {
     <Container maxW="7xl" py={8}>
       <Stack spacing={8}>
         {/* Header */}
-        <Flex justify="space-between" align="center">
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align={{ base: "flex-start", md: "center" }}
+          w="100%"
+          gap={4}
+        >
           <Heading size="lg">Investment Dashboard</Heading>
-          <Stack direction="row" spacing={4}>
+          <Flex wrap="wrap" gap={2}>
             <Button
               colorScheme={activeFilter === "all" ? "blue" : "gray"}
               onClick={() => setActiveFilter("all")}
@@ -74,7 +79,7 @@ const InvestmentDashboard = () => {
             >
               Insurance
             </Button>
-          </Stack>
+          </Flex>
         </Flex>
 
         {/* Content */}
