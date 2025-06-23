@@ -45,15 +45,17 @@ const InvestmentDashboard = () => {
   return (
     <Container maxW="7xl" py={8}>
       <Stack spacing={8}>
-        {/* Header */}
+        {/* Header */}          <Heading size="lg">Investment Dashboard</Heading>
+
         <Flex
           direction={{ base: "column", md: "row" }}
           justify="space-between"
           align={{ base: "flex-start", md: "center" }}
           w="100%"
-          gap={4}
+          gap={{
+            md:4
+          }}
         >
-          <Heading size="lg">Investment Dashboard</Heading>
           <Flex wrap="wrap" gap={2}>
             <Button
               colorScheme={activeFilter === "all" ? "blue" : "gray"}
