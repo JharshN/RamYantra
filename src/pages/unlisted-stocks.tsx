@@ -13,7 +13,6 @@ import supabase from "../../supabase";
 
 type Stock = {
   name: string;
-  logo: string;
   price: number;
   change: number;
   changePercent: number;
@@ -33,9 +32,9 @@ function StockCard({ stock }: { stock: Stock }) {
       mb={4}
       maxW="400px"
     >
-      <Box mr={4} minW="60px">
+      {/* <Box mr={4} minW="60px">
         <Image src={stock.logo} alt={stock.name} width={60} height={30} />
-      </Box>
+      </Box> */}
       <Box>
         <Heading size="md">{stock.name}</Heading>
         <Box fontSize="xl" fontWeight="bold">
