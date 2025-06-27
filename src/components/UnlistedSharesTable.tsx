@@ -6,11 +6,8 @@ import supabase from "../../supabase";
 interface UnlistedShare {
   id: number;
   name: string;
-  logo: string;
   price: number;
-  change: number;
-  change_percent: number;
-  days: number;
+  range: number;
 }
 
 const UnlistedSharesTable = () => {
@@ -21,9 +18,7 @@ const UnlistedSharesTable = () => {
   const columns = [
     { header: "Name", accessor: "name" },
     { header: "Price (₹)", accessor: "price", isNumeric: true },
-    { header: "Change", accessor: "change", isNumeric: true },
-    { header: "% Change", accessor: "change_percent", isNumeric: true },
-    { header: "Days", accessor: "days", isNumeric: true },
+    { header: "Range", accessor: "range", isNumeric: true },
   ];
 
   useEffect(() => {
@@ -31,7 +26,7 @@ const UnlistedSharesTable = () => {
       try {
         const { data, error } = await supabase
           .from("unlisted_shares")
-          .select("id, name, logo, price, change, change_percent, days");
+          .select("id, name, price, range");
 
         if (error) throw error;
         setShares(data || []);

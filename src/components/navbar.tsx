@@ -295,17 +295,17 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "NCDs",
         subLabel: "Non-Convertible Debentures",
-        href: "/investments/",
+        href: "/investments?type=ncd",
       },
       {
         label: "Unlisted Shares",
         subLabel: "Pre-IPO Investment Opportunities",
-        href: "/investments/",
+        href: "/investments?type=unlisted",
       },
       {
         label: "Insurance Products",
         subLabel: "Life and Health Insurance Solutions",
-        href: "/investments/",
+        href: "/investments?type=insurance",
       },
     ],
   },
