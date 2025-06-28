@@ -1,5 +1,6 @@
 import { NextSeo } from "next-seo";
 import InvestmentDashboard from "../components/InvestmentDashboard";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function InvestmentsPage() {
   return (
@@ -16,6 +17,7 @@ export default function InvestmentsPage() {
         }}
       />
       <InvestmentDashboard />
+      <WhatsAppButton />
     </>
   );
 }
